@@ -36,10 +36,14 @@ class ApiExampleController
         // You could actually pull data from the database if you had one set up
         // $user = $this->app->db()->fetchRow("SELECT * FROM users WHERE id = ?", [ $id ]);
         $users = [
-            ['id' => 1, 'name' => 'Bob Jones', 'email' => 'bob@example.com'],
+            ['id' => 9, 'name' => 'Bob Jones', 'email' => 'bob@example.com'],
             ['id' => 2, 'name' => 'Bob Smith', 'email' => 'bsmith@example.com'],
             ['id' => 3, 'name' => 'Suzy Johnson', 'email' => 'suzy@example.com'],
         ];
+
+        $user    = $this->app->db()->fetchRow('SELECT customerID, Login, Email,first_name FROM ant_customers WHERE customerID = ?', [$id]);
+        $users[] = $user;
+
         $users_filtered = array_filter($users, function ($data) use ($id) {
             return $data['id'] === (int) $id;
         });
