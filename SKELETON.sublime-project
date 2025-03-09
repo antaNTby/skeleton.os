@@ -1,0 +1,15 @@
+{
+    "folders": [
+        {
+            "path": ".",
+            "file_exclude_patterns": [
+            	"*.zip",
+            	"docker-compose.yml",
+            	"composer.lock",
+            	"Vagrantfile",
+
+            ]
+        },
+
+    ]
+}

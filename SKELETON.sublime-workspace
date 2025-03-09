@@ -1,0 +1,1145 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ba",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "SKELETON.sublime-project",
+			"settings":
+			{
+				"buffer_size": 242,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			},
+			"undo_stack":
+			[
+				[
+					7,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAACcAAAAAAAAAKAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJwAAAAAAAAAnAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AgAAACgAAAAAAAAAKQAAAAAAAAAAAAAAKQAAAAAAAAArAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKAAAAAAAAAAoAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					1,
+					"insert_snippet",
+					{
+						"contents": "\"$0\""
+					},
+					"AQAAACsAAAAAAAAALQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKwAAAAAAAAArAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": "excl"
+					},
+					"BAAAACwAAAAAAAAALQAAAAAAAAAAAAAALQAAAAAAAAAuAAAAAAAAAAAAAAAuAAAAAAAAAC8AAAAAAAAAAAAAAC8AAAAAAAAAMAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALAAAAAAAAAAsAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": "udet"
+					},
+					"BAAAADAAAAAAAAAAMQAAAAAAAAAAAAAAMQAAAAAAAAAyAAAAAAAAAAAAAAAyAAAAAAAAADMAAAAAAAAAAAAAADMAAAAAAAAANAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMAAAAAAAAAAwAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					12,
+					1,
+					"left_delete",
+					null,
+					"AQAAADMAAAAAAAAAMwAAAAAAAAABAAAAdA",
+					"AQAAAAAAAAABAAAANAAAAAAAAAA0AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					13,
+					1,
+					"insert",
+					{
+						"characters": "d_g"
+					},
+					"AwAAADMAAAAAAAAANAAAAAAAAAAAAAAANAAAAAAAAAA1AAAAAAAAAAAAAAA1AAAAAAAAADYAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMwAAAAAAAAAzAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					16,
+					1,
+					"paste",
+					null,
+					"AgAAACsAAAAAAAAApAAAAAAAAAAAAAAApAAAAAAAAACkAAAAAAAAAAwAAAAiZXhjbHVkZWRfZyI",
+					"AQAAAAAAAAABAAAANwAAAAAAAAArAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKMAAAAAAAAAowAAAAAAAAABAAAAfQ",
+					"AQAAAAAAAAABAAAApAAAAAAAAACkAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					20,
+					1,
+					"swap_line_up",
+					null,
+					"AgAAACkAAAAAAAAAKQAAAAAAAABOAAAACQkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICJmaWxlX2V4Y2x1ZGVfcGF0dGVybnMiOiBbIiouY3NzIl0KJAAAAAAAAAByAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdgAAAAAAAAB2AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					23,
+					1,
+					"left_delete",
+					null,
+					"AQAAAE4AAAAAAAAATgAAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAATwAAAAAAAABPAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					24,
+					1,
+					"delete_word",
+					{
+						"forward": false
+					},
+					"AQAAACQAAAAAAAAAJAAAAAAAAAAqAAAACQkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg",
+					"AQAAAAAAAAABAAAATgAAAAAAAABOAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					29,
+					1,
+					"insert",
+					{
+						"characters": "б"
+					},
+					"AQAAACMAAAAAAAAAJAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIwAAAAAAAAAjAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					30,
+					1,
+					"left_delete",
+					null,
+					"AQAAACMAAAAAAAAAIwAAAAAAAAACAAAA0LE",
+					"AQAAAAAAAAABAAAAJAAAAAAAAAAkAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					31,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAACMAAAAAAAAAJAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIwAAAAAAAAAjAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					33,
+					1,
+					"htmlprettify",
+					null,
+					"AQAAAAAAAAAAAAAAeAAAAAAAAAB/AAAAewoJImZvbGRlcnMiOgoJWwoJCXsKCQkJInBhdGgiOiAiLiIsCiJmaWxlX2V4Y2x1ZGVfcGF0dGVybnMiOiBbIiouY3NzIl0KCQl9LAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAoJXQp9Cg",
+					"AQAAAAAAAAABAAAAJAAAAAAAAAAkAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					38,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"BwAAAFwAAAAAAAAAXQAAAAAAAAAAAAAAXQAAAAAAAABpAAAAAAAAAAAAAABdAAAAAAAAAF0AAAAAAAAADAAAACAgICAgICAgICAgIF0AAAAAAAAAagAAAAAAAAAAAAAAagAAAAAAAABrAAAAAAAAAAAAAABrAAAAAAAAAHgAAAAAAAAAAAAAAF0AAAAAAAAAXQAAAAAAAAANAAAAICAgICAgICAgICAgCQ",
+					"AQAAAAAAAAABAAAAXAAAAAAAAABcAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					41,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"BwAAAHIAAAAAAAAAcwAAAAAAAAAAAAAAcwAAAAAAAACAAAAAAAAAAAAAAABzAAAAAAAAAHMAAAAAAAAADQAAACAgICAgICAgICAgIAlzAAAAAAAAAH8AAAAAAAAAAAAAAH8AAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAACMAAAAAAAAAAAAAABzAAAAAAAAAHMAAAAAAAAADAAAACAgICAgICAgICAgIA",
+					"AQAAAAAAAAABAAAAcgAAAAAAAAByAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					46,
+					1,
+					"insert",
+					{
+						"characters": "zip"
+					},
+					"BAAAAG4AAAAAAAAAbwAAAAAAAAAAAAAAbwAAAAAAAABvAAAAAAAAAAMAAABjc3NvAAAAAAAAAHAAAAAAAAAAAAAAAHAAAAAAAAAAcQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbgAAAAAAAABxAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					50,
+					1,
+					"right_delete",
+					null,
+					"AQAAAFwAAAAAAAAAXAAAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAXAAAAAAAAABcAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					56,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAAHEAAAAAAAAAcgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcQAAAAAAAABxAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					57,
+					3,
+					"duplicate_line",
+					null,
+					"AwAAAHMAAAAAAAAAiQAAAAAAAAAAAAAAiQAAAAAAAACfAAAAAAAAAAAAAACfAAAAAAAAALUAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcgAAAAAAAAByAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					62,
+					1,
+					"paste",
+					null,
+					"AgAAAIEAAAAAAAAAkwAAAAAAAAAAAAAAkwAAAAAAAACTAAAAAAAAAAQAAAAqLnpp",
+					"AQAAAAAAAAABAAAAgQAAAAAAAACFAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					63,
+					1,
+					"right_delete",
+					null,
+					"AQAAAJMAAAAAAAAAkwAAAAAAAAABAAAAcA",
+					"AQAAAAAAAAABAAAAkwAAAAAAAACTAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					66,
+					1,
+					"paste",
+					null,
+					"AgAAAKQAAAAAAAAAsQAAAAAAAAAAAAAAsQAAAAAAAACxAAAAAAAAAAUAAAAqLnppcA",
+					"AQAAAAAAAAABAAAApAAAAAAAAACpAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					69,
+					1,
+					"paste",
+					null,
+					"AgAAAMIAAAAAAAAAzQAAAAAAAAAAAAAAzQAAAAAAAADNAAAAAAAAAAUAAAAqLnppcA",
+					"AQAAAAAAAAABAAAAwgAAAAAAAADHAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "app/config/config.php",
+			"settings":
+			{
+				"buffer_size": 3249,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+			]
+		},
+		{
+			"file": "app/config/routes.php",
+			"settings":
+			{
+				"buffer_size": 857,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					5,
+					1,
+					"insert",
+					{
+						"characters": " Goo"
+					},
+					"BAAAAAIBAAAAAAAAAwEAAAAAAAAAAAAAAwEAAAAAAAAEAQAAAAAAAAAAAAAEAQAAAAAAAAUBAAAAAAAAAAAAAAUBAAAAAAAABgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAgEAAAAAAAACAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					6,
+					1,
+					"insert",
+					{
+						"characters": "dluck"
+					},
+					"BQAAAAYBAAAAAAAABwEAAAAAAAAAAAAABwEAAAAAAAAIAQAAAAAAAAAAAAAIAQAAAAAAAAkBAAAAAAAAAAAAAAkBAAAAAAAACgEAAAAAAAAAAAAACgEAAAAAAAALAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABgEAAAAAAAAGAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					7,
+					1,
+					"insert",
+					{
+						"characters": " ?"
+					},
+					"AgAAAAsBAAAAAAAADAEAAAAAAAAAAAAADAEAAAAAAAANAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACwEAAAAAAAALAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"insert",
+					{
+						"characters": " antaNT"
+					},
+					"BwAAAA0BAAAAAAAADgEAAAAAAAAAAAAADgEAAAAAAAAPAQAAAAAAAAAAAAAPAQAAAAAAABABAAAAAAAAAAAAABABAAAAAAAAEQEAAAAAAAAAAAAAEQEAAAAAAAASAQAAAAAAAAAAAAASAQAAAAAAABMBAAAAAAAAAAAAABMBAAAAAAAAFAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADQEAAAAAAAANAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					11,
+					2,
+					"left_delete",
+					null,
+					"AgAAAAwBAAAAAAAADAEAAAAAAAABAAAAPwsBAAAAAAAACwEAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAADAEAAAAAAAANAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					12,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAAAsBAAAAAAAADAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACwEAAAAAAAALAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					13,
+					1,
+					"php_fmt",
+					null,
+					"HgAAAF8AAAAAAAAAXwAAAAAAAAABAAAAIHYAAAAAAAAAdgAAAAAAAAABAAAAIKkAAAAAAAAAqgAAAAAAAAAAAAAAugAAAAAAAAC6AAAAAAAAAAEAAAAJugAAAAAAAAC+AAAAAAAAAAAAAADXAAAAAAAAANcAAAAAAAAAAQAAACAVAQAAAAAAABUBAAAAAAAAAQAAACBJAQAAAAAAAEoBAAAAAAAAAAAAAFQBAAAAAAAAVAEAAAAAAAABAAAACVQBAAAAAAAAWAEAAAAAAAAAAAAAdwEAAAAAAAB4AQAAAAAAAAAAAAB5AQAAAAAAAHoBAAAAAAAAAAAAAH8BAAAAAAAAgAEAAAAAAAAAAAAAgQEAAAAAAACCAQAAAAAAAAAAAACwAQAAAAAAALEBAAAAAAAAAAAAAMoBAAAAAAAAygEAAAAAAAABAAAACcoBAAAAAAAAzgEAAAAAAAAAAAAACAIAAAAAAAAIAgAAAAAAAAEAAAAJCAIAAAAAAAAMAgAAAAAAAAAAAAAkAgAAAAAAACQCAAAAAAAAAQAAACBHAgAAAAAAAEcCAAAAAAAAAQAAACBLAgAAAAAAAEsCAAAAAAAAAQAAAAlLAgAAAAAAAE8CAAAAAAAAAAAAAHECAAAAAAAAcQIAAAAAAAABAAAAIJMCAAAAAAAAkwIAAAAAAAABAAAAIJcCAAAAAAAAlwIAAAAAAAABAAAACZcCAAAAAAAAmwIAAAAAAAAAAAAAvgIAAAAAAAC+AgAAAAAAAAEAAAAg4wIAAAAAAADjAgAAAAAAAAEAAAAg6gIAAAAAAADrAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADAEAAAAAAAAMAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					19,
+					1,
+					"duplicate_line",
+					null,
+					"AQAAAJABAAAAAAAAAwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkAEAAAAAAAAdAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					23,
+					1,
+					"insert",
+					{
+						"characters": "сщьзфт"
+					},
+					"BwAAAKABAAAAAAAAoQEAAAAAAAAAAAAAoQEAAAAAAAChAQAAAAAAAAsAAABoZWxsby13b3JsZKEBAAAAAAAAogEAAAAAAAAAAAAAogEAAAAAAACjAQAAAAAAAAAAAACjAQAAAAAAAKQBAAAAAAAAAAAAAKQBAAAAAAAApQEAAAAAAAAAAAAApQEAAAAAAACmAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAoAEAAAAAAACrAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					24,
+					1,
+					"insert",
+					{
+						"characters": "шуы"
+					},
+					"AwAAAKYBAAAAAAAApwEAAAAAAAAAAAAApwEAAAAAAACoAQAAAAAAAAAAAACoAQAAAAAAAKkBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApgEAAAAAAACmAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					25,
+					9,
+					"left_delete",
+					null,
+					"CQAAAKgBAAAAAAAAqAEAAAAAAAACAAAA0YunAQAAAAAAAKcBAAAAAAAAAgAAANGDpgEAAAAAAACmAQAAAAAAAAIAAADRiKUBAAAAAAAApQEAAAAAAAACAAAA0YKkAQAAAAAAAKQBAAAAAAAAAgAAANGEowEAAAAAAACjAQAAAAAAAAIAAADQt6IBAAAAAAAAogEAAAAAAAACAAAA0YyhAQAAAAAAAKEBAAAAAAAAAgAAANGJoAEAAAAAAACgAQAAAAAAAAIAAADRgQ",
+					"AQAAAAAAAAABAAAAqQEAAAAAAACpAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					26,
+					1,
+					"insert",
+					{
+						"characters": "companies"
+					},
+					"CQAAAKABAAAAAAAAoQEAAAAAAAAAAAAAoQEAAAAAAACiAQAAAAAAAAAAAACiAQAAAAAAAKMBAAAAAAAAAAAAAKMBAAAAAAAApAEAAAAAAAAAAAAApAEAAAAAAAClAQAAAAAAAAAAAAClAQAAAAAAAKYBAAAAAAAAAAAAAKYBAAAAAAAApwEAAAAAAAAAAAAApwEAAAAAAACoAQAAAAAAAAAAAACoAQAAAAAAAKkBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAoAEAAAAAAACgAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					29,
+					1,
+					"insert",
+					{
+						"characters": "unp"
+					},
+					"BAAAAKsBAAAAAAAArAEAAAAAAAAAAAAArAEAAAAAAACsAQAAAAAAAAQAAABuYW1lrAEAAAAAAACtAQAAAAAAAAAAAACtAQAAAAAAAK4BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqwEAAAAAAACvAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					32,
+					1,
+					"insert",
+					{
+						"characters": "unp"
+					},
+					"BAAAALwBAAAAAAAAvQEAAAAAAAAAAAAAvQEAAAAAAAC9AQAAAAAAAAQAAABuYW1lvQEAAAAAAAC+AQAAAAAAAAAAAAC+AQAAAAAAAL8BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvAEAAAAAAADAAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					37,
+					1,
+					"insert",
+					{
+						"characters": "unp"
+					},
+					"BAAAAOoBAAAAAAAA6wEAAAAAAAAAAAAA6wEAAAAAAADrAQAAAAAAAAQAAABuYW1l6wEAAAAAAADsAQAAAAAAAAAAAADsAQAAAAAAAO0BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6gEAAAAAAADuAQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "app/controllers/ApiExampleController.php",
+			"settings":
+			{
+				"buffer_size": 1851,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+			]
+		},
+		{
+			"contents": "Searching 282 files for \"updateUser\" (whole word)\n\nC:\\OSPanel\\home\\skeleton.os\\app\\config\\routes.php:\n   25      $router->get('/users', [$Api_Example_Controller, 'getUsers']);\n   26      $router->get('/users/@id:[0-9]', [$Api_Example_Controller, 'getUser']);\n   27:     $router->post('/users/@id:[0-9]', [$Api_Example_Controller, 'updateUser']);\n   28  });\n   29  \n\nC:\\OSPanel\\home\\skeleton.os\\app\\controllers\\ApiExampleController.php:\n   45  \t}\n   46  \n   47: \tpublic function updateUser($id) {\n   48  \t\t// You could actually update data from the database if you had one set up\n   49  \t\t// $statement = $this->app->db()->runQuery(\"UPDATE users SET email = ? WHERE id = ?\", [ $this->app->data['email'], $id ]);\n\n2 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 737,
+				"line_ending": "Windows",
+				"name": "Find Results",
+				"scratch": true
+			},
+			"undo_stack":
+			[
+			]
+		}
+	],
+	"build_system": "Packages/PHP/PHP.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/PHP/PHP.sublime-build",
+					""
+				],
+				[
+					"Packages/PHP/PHP.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/PHP/PHP.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"inpak",
+				"Package Control: Install Package"
+			],
+			[
+				"ip",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"phpfmt: toggle PSR2"
+			],
+			[
+				"phpcs",
+				"PHP Coding Standards Fixer: Fix this file (PHP Code Beautifier)"
+			],
+			[
+				"rempa",
+				"Package Control: Remove Package"
+			],
+			[
+				"inpa",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"INSpa",
+				"Package Control: Install Package"
+			],
+			[
+				"insp",
+				"Package Control: Install Package"
+			],
+			[
+				"instpa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 101.0,
+		"history":
+		[
+			"help",
+			"clear",
+			"cls"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/OSPanel/home/skeleton.os",
+		"/C/OSPanel/home/skeleton.os/app",
+		"/C/OSPanel/home/skeleton.os/app/commands",
+		"/C/OSPanel/home/skeleton.os/app/config",
+		"/C/OSPanel/home/skeleton.os/app/controllers",
+		"/C/OSPanel/home/skeleton.os/app/views"
+	],
+	"file_history":
+	[
+		"/C/OSPanel/home/skeleton.os/app/views/welcome.php",
+		"/C/OSPanel/home/skeleton.os/.osp/project.ini",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/User/Side Bar.sublime-settings",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/C/OSPanel/home/shopCMS.os/PURE.sublime-project",
+		"/C/OSPanel/home/shopCMS.os/admin.php",
+		"/C/OSPanel/home/shopCMS.os/admin2.php",
+		"/C/OSPanel/home/shopCMS.os/index2.php",
+		"/C/OSPanel/home/shopCMS.os/core/functions/functions.php",
+		"/C/OSPanel/home/shopCMS.os/core/config/init.php",
+		"/C/OSPanel/logs/PHP-5.3-x64.log",
+		"/C/OSPanel/home/fr.loc/core/Auth.php",
+		"/C/OSPanel/home/fr.loc/config/config.php",
+		"/C/OSPanel/home/fr.loc/core/Application.php",
+		"/C/OSPanel/home/fr.loc/helpers/helpers.php",
+		"/C/OSPanel/home/shopCMS.os/.osp/project.ini",
+		"/C/OSPanel/home/fr.loc/fr_loc.sql",
+		"/E/run.ini",
+		"/C/OSPanel/home/fr.loc/vendor/symfony/var-dumper/Caster/MysqliCaster.php",
+		"/C/OSPanel/home/fr.loc/FR.LOC.sublime-project",
+		"/C/OSPanel/home/fr.loc/.osp/project.ini",
+		"/C/OSPanel/home/ant2025.os/admin/core/authentication.php",
+		"/C/OSPanel/config/PHP-8.3/default/templates/php.ini",
+		"/C/OSPanel/home/ant2025.os/admin/core/functions/admin_functions.php",
+		"/C/OSPanel/home/ant2025.os/admin/tpl/admin.tpl.html",
+		"/C/OSPanel/home/ant2025.os/admin/smarty/compile_dir/ant2025^b3ecdbb0c747046c7b42491693d760e1f89410ac_0.file_admin.tpl.html.php",
+		"/C/OSPanel/home/ant2025.os/admin/tpl/start.tpl.html",
+		"/C/OSPanel/home/ant2025.os/index.php",
+		"/C/OSPanel/home/ant2025.os/admin/core/const.php",
+		"/C/OSPanel/home/ant2025.os/admin/admin.php",
+		"/C/OSPanel/home/ant2025.os/vendor/smarty/smarty/src/Template/Source.php",
+		"/C/OSPanel/home/ant2025.os/admin/index.php",
+		"/C/OSPanel/home/ant2025.os/admin/core/login_html.php",
+		"/C/OSPanel/home/ant2025.os/admin/core/functions/registration_functions.php",
+		"/C/OSPanel/home/ant2025.os/vendor/thingengineer/mysqli-database-class/dbObject.md",
+		"/C/OSPanel/home/ant2025.os/vendor/thingengineer/mysqli-database-class/readme.md",
+		"/C/OSPanel/home/ant2025.os/admin/tpl/error_forbidden_login.tpl.html",
+		"/C/OSPanel/home/ant2025.os/admin/core/loginHtml.php",
+		"/C/OSPanel/home/ant2025.os/admin/functions/debug_functions.php",
+		"/C/OSPanel/home/ant2025.os/admin/functions/session_functions.php",
+		"/C/OSPanel/home/ant2025.os/admin/functions/expired_functions.php",
+		"/C/OSPanel/home/ant2025.os/admin/debuggerLog/exception.log",
+		"/C/OSPanel/home/ant2025.os/.gitignore",
+		"/C/OSPanel/home/ant2025.os/_2025_.sublime-project",
+		"/C/OSPanel/home/ant2025.os/admin/debuggerLog/exception--2025-02-27--11-52--9ba91eb0ab.html",
+		"/C/OSPanel/home/ant2025.os/admin/functions/admin_functions.php",
+		"/C/OSPanel/home/ant2025.os/vendor/tracy/tracy/src/Tracy/BlueScreen/BlueScreen.php",
+		"/C/OSPanel/home/ant2025.os/admin/functions/registration_functions.php",
+		"/C/tmp/exception.log",
+		"/C/OSPanel/logs/general.log",
+		"/C/OSPanel/home/ant2025.os/vendor/thingengineer/mysqli-database-class/MysqliDb.php",
+		"/C/OSPanel/home/ant2025.os/vendor/thingengineer/mysqli-database-class/dbObject.php",
+		"/C/OSPanel/home/ant2025.os/admin/trash.php",
+		"/C/OSPanel/home/ant2025.os/admin/core/database_connect.php",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/User/Preferences.sublime-settings",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/User/Svelte5BUILD.sublime-build",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/User/svelte5.sublime-build",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/User/phpfmt.sublime-settings",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/User/Svelte.sublime-syntax",
+		"/C/OSPanel/home/user.auth/.osp/project.ini",
+		"/C/OSPanel/home/php_mobile_user_auth/.osp/project.ini",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/phpfmt/phpfmt.sublime-settings",
+		"/C/OSPanel/home/ant2025.os/classes/MysqliDb.php",
+		"/C/OSPanel/home/ant2025.os/vendor/smarty/smarty/src/CompilerException.php",
+		"/C/OSPanel/home/ant2025.os/vendor/thingengineer/mysqli-database-class/composer.json",
+		"/C/OSPanel/home/ant2025.os/composer.json",
+		"/C/OSPanel/home/ant2025.os/classes/dbObject.php",
+		"/C/OSPanel/home/ant2025.os/vendor/smarty/smarty/composer.json",
+		"/C/OSPanel/home/ant2025.os/classes/MyToasts.php",
+		"/C/OSPanel/home/ant2025.os/classes/MySQLMultiQuery.php",
+		"/C/OSPanel/home/antCMS.os/admin/core/bootstrap.php",
+		"/C/OSPanel/home/antCMS.os/_ANTCMS_.sublime-project",
+		"/C/OSPanel/home/antCMS.os/admin/css/uiAdmin.css",
+		"/C/OSPanel/home/ant2025.os/vendor/composer/installed.php",
+		"/C/OSPanel/logs/PHP-8.3/php_error.log",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/User/phpcbf.sublime-settings",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/User/phpcs.sublime-settings",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/Phpcs/phpcs.sublime-settings",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/User/Default (Windows).sublime-keymap",
+		"/C/OSPanel/logs/PHP-8.3/apache_error.log",
+		"/C/OSPanel/logs/PHP-8.3.log",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/phpcbf/Default (Windows).sublime-keymap",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/phpcbf/phpcbf.sublime-settings",
+		"/C/OSPanel/home/ant2025.os/.osp/project.ini",
+		"/C/OSPanel/home/ant2025.os/public/index.php",
+		"/C/OSPanel/logs/PHP-5.3-x64/php_error.log",
+		"/C/OSPanel/home/antMINSK.os/.osp/project.ini",
+		"/C/OSPanel/home/antCMS.os/admin/core/connect.php",
+		"/C/OSPanel/home/antCMS.os/admin/core/functions.php",
+		"/C/OSPanel/home/antCMS.os/.gitignore",
+		"/C/OSPanel/home/antCMS.os/admin/core/classes/antDataBase.php",
+		"/C/OSPanel/home/antCMS.os/admin/core/mysqli.php",
+		"/C/OSPanel/home/antCMS.os/PROJECT_antCMS.sublime-project",
+		"/C/OSPanel/home/antCMS.os/database_install/nixby_nixbydb.sql",
+		"/C/OSPanel/home/antCMS.os/admin/core/const.php",
+		"/C/OSPanel/home/antFlight.core/admin/index.php",
+		"/c/ospanel/home/antflight.core/public/index.php",
+		"/C/OSPanel/home/antFlight.core/.osp/project.ini",
+		"/C/OSPanel/home/antFlight.core/.gitignore",
+		"/C/OSPanel/home/antFlight.core/public/rrr/index.php",
+		"/C/OSPanel/home/antFlight.core/public/index.php",
+		"/C/OSPanel/home/antFlight.core/index.php",
+		"/C/OSPanel/home/antFlight.core/admin/sub/orders/neworder.php",
+		"/C/OSPanel/home/mySvelte.ant/svelteTEST.sublime-project",
+		"/C/OSPanel/home/mySvelte.ant/.gitignore",
+		"/C/OSPanel/logs/MySQL-8.2.log",
+		"/C/OSPanel/logs/api.log",
+		"/C/OSPanel/logs/scheduler.log",
+		"/C/OSPanel/logs/PHP-8.1.log",
+		"/C/OSPanel/home/mySvelte.ant/mySvelte____.sublime-project",
+		"/C/OSPanel/home/mySvelte.ant/Project_mySvelte.sublime-project",
+		"/C/OSPanel/home/mySvelte.ant/public/index.html",
+		"/C/OSPanel/home/mySvelte.ant/__help/интеграци.svelte",
+		"/C/OSPanel/home/mySvelte.ant/__help/компонент.svelte",
+		"/C/OSPanel/home/mySvelte.ant/__help/настройка.svelte",
+		"/C/OSPanel/home/mySvelte.ant/__help/пример1.svelte",
+		"/C/OSPanel/home/mySvelte.ant/my-app/package.json",
+		"/C/OSPanel/home/mySvelte.ant/__help/console.text",
+		"/C/OSPanel/home/mySvelte.ant/package.json",
+		"/C/OSPanel/home/mySvelte.ant/my-app/src/app.html",
+		"/C/OSPanel/home/mySvelte/public/index.html",
+		"/C/OSPanel/home/mySvelte/__help/habbr.svelte",
+		"/C/OSPanel/home/mySvelte/__help/console.text",
+		"/C/OSPanel/home/mySvelte/package.json",
+		"/C/OSPanel/config/menu.ini",
+		"/C/OSPanel/config/program.ini",
+		"/C/Users/a/AppData/Roaming/Sublime Text/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
+		"/C/Users/a/AppData/Local/Packages/Microsoft.Windows.DevHome_8wekyb3d8bbwe/TempState/Logs/DevHome/devhome20250207.dhlog"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 118.0,
+		"where_history":
+		[
+			"",
+			"verifyPassword",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"updateUser",
+			"$dsn",
+			"welcome.php",
+			" $_SESSION['current_language']",
+			"HT;",
+			"<<<<HT",
+			">';",
+			"$bootstrap_",
+			"= '",
+			"$showDump = false",
+			"logo256",
+			"site_url",
+			"access_denied_html",
+			"Username",
+			"ERROR_FORBIDDEN",
+			"zend",
+			"Необходимо указать логин и пароль.",
+			"checkLogin__OLD",
+			"regAuthenticate",
+			"ADMIN_FILE",
+			"session_cache_expire",
+			"AccessDe",
+			"regAuthenticate",
+			"dump",
+			"set_cookie",
+			"passw",
+			"$_SESSION['log']",
+			"ACCES_DENIED_HTML",
+			"LOGO256",
+			"favicon.ico",
+			"last",
+			"enable",
+			"\"",
+			" '\n\" . ",
+			" #",
+			": ",
+			"_DIR_",
+			"setSessionStorage",
+			"$db->getOne",
+			"checkLogin",
+			"/static/",
+			"$smarty->display",
+			"salmon",
+			"vendor",
+			"../",
+			"ERROR_FORBIDDEN",
+			"media",
+			"rawQuery",
+			"query",
+			"returnType",
+			"where",
+			"public",
+			"returnType",
+			"like",
+			"customers",
+			"ReflectionClass"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"verifyPassword",
+			""
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "SKELETON.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 242,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								205,
+								205
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///C:/OSPanel/home/skeleton.os/SKELETON.sublime-project",
+							"syntax": "Packages/JSON/JSON.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/config/config.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3249,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								205,
+								205
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///C:/OSPanel/home/skeleton.os/app/config/config.php",
+							"open_with_edit": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 924.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/config/routes.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 857,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								773,
+								773
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///C:/OSPanel/home/skeleton.os/app/config/routes.php",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/ApiExampleController.php",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1851,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1446,
+								1446
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///C:/OSPanel/home/skeleton.os/app/controllers/ApiExampleController.php",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 369.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 737,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										331,
+										341
+									],
+									[
+										478,
+										488
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								337,
+								337
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								}
+							],
+							"default_dir": "C:\\OSPanel\\home\\skeleton.os\\app\\controllers",
+							"detect_indentation": false,
+							"line_numbers": false,
+							"lsp_uri": "buffer:207",
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 55.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 126.0
+	},
+	"output.diagnostics":
+	{
+		"height": 126.0
+	},
+	"output.exec":
+	{
+		"height": 71.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/PHP/PHP.sublime-build",
+	"project": "SKELETON.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"sql",
+				"fr_loc.sql"
+			],
+			[
+				"start.tpl.html",
+				"ant2025.os\\admin\\tpl\\start.tpl.html"
+			],
+			[
+				"admin.tpl.html",
+				"ant2025.os\\admin\\tpl\\admin.tpl.html"
+			],
+			[
+				"admin/index.php",
+				"ant2025.os\\admin\\index.php"
+			],
+			[
+				"auth",
+				"ant2025.os\\admin\\core\\authentication.php"
+			],
+			[
+				"admin.php",
+				"ant2025.os\\admin\\admin.php"
+			],
+			[
+				"admin_functions",
+				"ant2025.os\\admin\\core\\functions\\admin_functions.php"
+			],
+			[
+				"errtpl",
+				"ant2025.os\\admin\\tpl\\error_forbidden_login.tpl.html"
+			],
+			[
+				"cons",
+				"ant2025.os\\admin\\core\\const.php"
+			],
+			[
+				"db.md",
+				"ant2025.os\\vendor\\thingengineer\\mysqli-database-class\\dbObject.md"
+			],
+			[
+				"ses",
+				"ant2025.os\\admin\\functions\\session_functions.php"
+			],
+			[
+				"const",
+				"ant2025.os\\admin\\core\\const.php"
+			],
+			[
+				"aut",
+				"ant2025.os\\admin\\core\\authentication.php"
+			],
+			[
+				"conne",
+				"ant2025.os\\admin\\core\\database_connect.php"
+			],
+			[
+				"MysqliDb",
+				"ant2025.os\\vendor\\thingengineer\\mysqli-database-class\\MysqliDb.php"
+			],
+			[
+				"trash",
+				"ant2025.os\\admin\\trash.php"
+			],
+			[
+				"Conne",
+				"ant2025.os\\admin\\core\\database_connect.php"
+			],
+			[
+				"bootstrap",
+				"admin\\core\\bootstrap.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"lsp_show_inlay_hints": false
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 252.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
