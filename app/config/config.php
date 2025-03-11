@@ -52,6 +52,8 @@ $app->set( 'flight.views.path', __DIR__ . $ds . '..' . $ds . 'views' ); // set t
 $app->set( 'flight.views.extension', '.php' );                          // set the file extension for your view/template/ui files
 $app->set( 'flight.content_length', true );                             // if flight should send a content length header
 
+// dump( $app );
+
 /*
  * Get Tracy up and running
  *
@@ -84,7 +86,7 @@ const DB_COLLATION      = 'utf8mb4_unicode_ci'; # Database Charset Collation (op
 const DB_CACHEDIR       = '../admin/database/database_cache';
 const DB_PORT           = 3306;
 
-$pdo_connect = [
+$pdox_connect = [
 	'host'           => DB_HOST,
 	'db'             => DB_NAME,
 	'user'           => DB_USER,

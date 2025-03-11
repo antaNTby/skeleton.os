@@ -3,6 +3,8 @@
 use flight\database\PdoWrapper;
 use flight\debug\database\PdoQueryCapture;
 use flight\Engine;
+use Smarty\Smarty;
+use Symfony\Component\VarDumper\VarDumper;
 use Tracy\Debugger;
 
 /**
