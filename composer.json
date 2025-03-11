@@ -24,7 +24,9 @@
         "php": "^7.4 || ^8.0",
         "ext-json": "*",
         "flightphp/core": "^3.0",
+        "flightphp/permissions": "^0.1.0",
         "flightphp/runway": "^0.2 || ^1.1",
+        "ghostff/session": "^3.0",
         "smarty/smarty": "^5.4",
         "tracy/tracy": "^2.9"
     },
