@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>login latte</title>
+</head>
+<body>
+{* ######## <h1>Login</h1> *}
+{* ######## <form action="{route('login_authenticate')}" method="post"> *}
+{* ######## 	<p>Login as whoever! And the password is always "password" (no quotes)</p> *}
+{* ######## 	<label for="username">Username:</label> *}
+{* ######## 	<input type="text" name="username" id="username" required> *}
+{* ######## 	<label for="password">Password:</label> *}
+{* ######## 	<input type="password" name="password" id="password" required> *}
+{* ########  *}
+{* ######## 	<button type="submit">Login</button> *}
+{* ######## </form> *}
+
+{block name="content"}
+<h1>Login</h1>
+<form action="{$base_url}/login_authenticate" method="post">
+    <p>Login as whoever! And the password is always "password" (no quotes)</p>
+    <label for="username">Username:</label>
+    <input type="text" name="username" id="username" required>
+    <label for="password">Password:</label>
+    <input type="password" name="password" id="password" required>
+
+    <button type="submit">Login</button>
+</form>
+{/block}
+
+</body>
+</html>
