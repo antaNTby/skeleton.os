@@ -25,5 +25,4 @@
    by Dick Williams, rjw1@tyrell.net
 */
 $ds = DIRECTORY_SEPARATOR;
-// dump($ds);
 require __DIR__ . $ds . '..' . $ds . 'app' . $ds . 'config' . $ds . 'bootstrap.php';

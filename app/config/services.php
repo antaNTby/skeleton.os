@@ -1,15 +1,21 @@
 <?php
 
-use flight\Engine;
 use flight\database\PdoWrapper;
 use flight\debug\database\PdoQueryCapture;
+use flight\Engine;
+
+######### use Symfony\Component\VarDumper\Cloner\VarCloner;
+######### use Symfony\Component\VarDumper\Dumper\HtmlDumper;
+######### use Symfony\Component\VarDumper\VarDumper;
+use Symfony\Component\VarDumper\VarDumper;
 use Tracy\Debugger;
 
-/** 
+/**
  * @var array $config This comes from the returned array at the bottom of the config.php file
  * @var Engine $app
  */
 
+// dd( $ds );
 // uncomment the following line for MySQL
 // $dsn = 'mysql:host=' . $config['database']['host'] . ';dbname=' . $config['database']['dbname'] . ';charset=utf8mb4';
 
