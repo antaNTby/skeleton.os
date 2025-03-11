@@ -1,10 +1,11 @@
 <?php
 
 use flight\debug\tracy\TracyExtensionLoader;
-use Symfony\Component\VarDumper\VarDumper;
+
 ######### use Symfony\Component\VarDumper\Cloner\VarCloner;
 ######### use Symfony\Component\VarDumper\Dumper\HtmlDumper;
 ######### use Symfony\Component\VarDumper\VarDumper;
+use Symfony\Component\VarDumper\VarDumper;
 use Tracy\Debugger;
 
 function sdump( $variable ) {
@@ -37,6 +38,10 @@ if ( empty( $app ) ) {
 	$app = Flight::app();
 }
 
+// $upOne = dirname( __DIR__, 1 );
+// dd( [dirname( __DIR__ ), $upOne, __DIR__] );
+
+define( '__APP__', dirname( __DIR__, 1 ) );
 // if you want to load classes that have underscores in them, comment out the following line
 // Loader::setV2ClassLoading(false);
 
@@ -44,13 +49,15 @@ if ( empty( $app ) ) {
 $app->path( __DIR__ . $ds . '..' . $ds . '..' );
 
 // This is where you can set some flight config variables.
-$app->set( 'flight.base_url', '/' );                                    // if this is in a subdirectory, you'll need to change this
-$app->set( 'flight.case_sensitive', false );                            // if you want case sensitive routes, set this to true
-$app->set( 'flight.log_errors', true );                                 // if you want to log errors, set this to true
-$app->set( 'flight.handle_errors', false );                             // if you want flight to handle errors, set this to true, otherwise Tracy will handle them
-$app->set( 'flight.views.path', __DIR__ . $ds . '..' . $ds . 'views' ); // set the path to your view/template/ui files
-$app->set( 'flight.views.extension', '.php' );                          // set the file extension for your view/template/ui files
-$app->set( 'flight.content_length', true );                             // if flight should send a content length header
+$app->set( 'flight.base_url', '/' );         // if this is in a subdirectory, you'll need to change this
+$app->set( 'flight.case_sensitive', false ); // if you want case sensitive routes, set this to true
+$app->set( 'flight.log_errors', true );      // if you want to log errors, set this to true
+$app->set( 'flight.handle_errors', false );  // if you want flight to handle errors, set this to true, otherwise Tracy will handle them
+// $app->set( 'flight.views.path', __DIR__ . $ds . '..' . $ds . 'views' ); // set the path to your view/template/ui files
+// $app->set( 'flight.views.extension', '.php' );       // set the file extension for your view/template/ui files
+$app->set( 'flight.views.path', __APP__ . $ds . 'tpl' ); // set the path to your view/template/ui files
+$app->set( 'flight.views.extension', '.tpl.html' );      // set the file extension for your view/template/ui files
+$app->set( 'flight.content_length', true );              // if flight should send a content length header
 
 // dump( $app );
 
