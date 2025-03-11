@@ -1,21 +1,8 @@
 <?php
 
 use flight\debug\tracy\TracyExtensionLoader;
-
-######### use Symfony\Component\VarDumper\Cloner\VarCloner;
-######### use Symfony\Component\VarDumper\Dumper\HtmlDumper;
-######### use Symfony\Component\VarDumper\VarDumper;
 use Symfony\Component\VarDumper\VarDumper;
 use Tracy\Debugger;
-
-function sdump($variable)
-{
-    // Используем VarDumper для дампа переменной
-    VarDumper::dump($variable);
-
-    // Используем Debugger для дампа переменной
-    // Debugger::dump($variable);
-}
 
 // Set the default timezone
 date_default_timezone_set('Europe/Minsk');
@@ -76,6 +63,63 @@ if (Debugger::$showBar && php_sapi_name() !== 'cli') {
     $app->set('flight.content_length', false); // if Debugger bar is visible, then content-length can not be set by Flight
     (new TracyExtensionLoader($app));
 }
+// пример вывода в плавающем окне
+//            bdump([1, 3, 5, 7, 9], 'odd numbersuptoten');
+
+// пример вывода в теле сайта
+//            $arr=[222,333,44,5555,6,77777];
+//            Tracy\Debugger::dump($arr);
+
+// Еще один полезный инструмент – секундомер отладчика с точностью до микросекунд:
+//            Tracy\Debugger::timer();
+//            // sweet dreams my cherrie
+//            sleep(2);
+//            $elapsed = Tracy\Debugger::timer();
+//            // $elapsed = 2
+//            echo $elapsed;
+//            dump($elapsed);
+
+### отладчик Symfony\Component\VarDumper
+### https://symfony.com/doc/current/components/var_dumper.html#using-the-vardumper-component-in-your-phpunit-test-suite
+function sdump($variable)
+{
+    // Используем VarDumper для дампа переменной
+    VarDumper::dump($variable);
+
+    // Используем Debugger для дампа переменной
+    // Debugger::dump($variable);
+}
+
+/*VarDumper::setHandler(function ($var) {
+    // Создаем экземпляр HtmlDumper
+    $dumper = new HtmlDumper();
+
+    // Настраиваем опции отображения
+    $dumper->setDisplayOptions([
+        'maxDepth'        => 5,
+        'maxStringLength' => 100,
+        // 'fileLinkFormat' => 'file://%f#L%l',
+        // 'fileLinkFormat' => 'vscode://file/%f:%l'
+        'fileLinkFormat'  => 'subl://open?url=file://%f:%l',
+    ]);
+
+    // Устанавливаем тему
+    $dumper->setTheme('light');
+
+    // Создаем экземпляр VarCloner
+    $cloner = new VarCloner();
+    // Вывод дампа в браузер
+    $dumper->dump($cloner->cloneVar($var));
+}); //VarDumper::setHandler*/
+
+/*
+ * This is where you will store database credentials, api credentials
+ * and other sensitive information. This file will not be tracked by git
+ * as you shouldn't be pushing sensitive information to a public or private
+ * repository.
+ *
+ * What you store here is totally up to you.
+ */
 
 const DBMS              = 'mysqli';             //   {$smarty.const.DBMS}          database host   # Database Driver Type (optional)
 const DB_DRIVER         = 'mysqli';             //   {$smarty.const.DBMS}          database host   # Database Driver Type (optional)
@@ -90,31 +134,20 @@ const DB_COLLATION      = 'utf8mb4_unicode_ci'; # Database Charset Collation (op
 const DB_CACHEDIR       = '../admin/database/database_cache';
 const DB_PORT           = 3306;
 
-/*
- * This is where you will store database credentials, api credentials
- * and other sensitive information. This file will not be tracked by git
- * as you shouldn't be pushing sensitive information to a public or private
- * repository.
- *
- * What you store here is totally up to you.
- */
-
 return [
     'database' => [
-        // uncomment the below 4 lines for mysql
-        // 'host' => 'localhost',
-        // 'dbname' => 'dbname',
-        // 'user' => 'user',
-        // 'password' => 'password'
-
-        // uncomment the following line for sqlite
-        // 'file_path' => __DIR__ . $ds . '..' . $ds . 'database.sqlite'
-
         'host'     => DB_HOST,
         'dbname'   => DB_NAME,
         'user'     => DB_USER,
         'password' => DB_PASS,
 
+        // uncomment the below 4 lines for mysql
+        // 'host' => 'localhost',
+        // 'dbname' => 'dbname',
+        // 'user' => 'user',
+        // 'password' => 'password'
+        // uncomment the following line for sqlite
+        // 'file_path' => __DIR__ . $ds . '..' . $ds . 'database.sqlite'
     ],
 
     // this is just here for an example

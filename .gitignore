@@ -6,3 +6,5 @@ composer.lock
 runway
 vendor/
 app/smarty/compile_dir/*.php
+public/lib/bootstrap-icons-1.11.3/
+public/lib/bootstrap-5.3.3-dist/

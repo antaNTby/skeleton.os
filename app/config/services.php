@@ -1,10 +1,6 @@
 <?php
 
-use flight\database\PdoWrapper;
-use flight\debug\database\PdoQueryCapture;
 use flight\Engine;
-use Symfony\Component\VarDumper\VarDumper;
-use Tracy\Debugger;
 
 /**
  * @var array $config This comes from the returned array at the bottom of the config.php file
@@ -28,3 +24,48 @@ use Tracy\Debugger;
 
 // Redis? This is where you'd set that up
 // $app->register('redis', Redis::class, [ $config['redis']['host'], $config['redis']['port'] ]);
+
+function checkLogin($showDump = true)
+{
+    $roles   = [];
+    $message = '';
+
+    // Look for the user in the database
+    if (isset($_SESSION['log'])) {
+
+        $db = MysqliDb::getInstance();
+        $db->where('Login', trim($_SESSION['log']));
+        $row = $db->getOne('customers', 'cust_password, actions');
+
+        if (! $row) {
+            $message .= 'User not found. ';
+        }
+        if (! isset($_SESSION['pass'])) {
+            $message .= 'Password is not saved. ';
+        }
+        if ($_SESSION['pass'] !== $row['cust_password']) {
+            $message .= 'Password does not match. ';
+        }
+
+        if ($message !== '') {
+            unset($_SESSION['log']);
+            unset($_SESSION['pass']);
+            unset($_SESSION['current_currency']);
+        } else {
+            try {
+                $roles = unserialize($row['actions']);
+                unset($row);
+            } catch (Exception $e) {
+                $roles = [];
+            }
+        }
+    } else {
+        $message .= 'User is not logged in. ';
+    }
+
+    if ($showDump && $message !== '') {
+        bdump($message);
+    }
+
+    return $roles;
+}

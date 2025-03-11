@@ -19,7 +19,7 @@
     </style>
     {/literal}
     <base href= />
-    <link rel="icon" sizes=16x16 href="/media/favicon.ico">
+    <link rel="icon" sizes=16x16 href="/lib/favicon.ico">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,14 +27,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <title>admin :: {$smarty.const.SITE_URL} :: antCMS v00 alpha</title>
     {* css links *}
-    {*
-    <link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.min.css"> *}
-    {* <link rel="stylesheet" type="text/css" href="/vendor/twbs/bootstrap/dist/css/bootstrap.min.css"> *}
-    {* <link rel="stylesheet" type="text/css" href="/vendor/twbs/bootstrap-icons/font/bootstrap-icons.min.css"> *}
-    <link rel="stylesheet" type="text/css" href="/lib/datatables/datatables.css">
-    <link rel="stylesheet" type="text/css" href="/admin/css/uiAdmin.css">
+
     {$headLinks.bootstrap_icons_css_local}
     {$headLinks.bootstrap_css_local}
+    {* {$headLinks.datatables_css_local} *}
+    {$headLinks.uiAdmin_css}
 
 
 </head>
@@ -110,22 +107,7 @@
 
 </div>
 
-
-
-    {*main scripts.js*}
-    {* <script src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script> *}
-    <script src="/vendor/components/jquery/jquery.min.js"></script>
-    <script src="/vendor/twbs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/lib/datatables/datatables.js"></script>
-    {* <script src="/lib/datatables/dataTables.cellEdit.js"></script> *}
-    {* my scripts *}
-    <script src="/admin/js/admin.js"></script>
-    <script src="/admin/js/index.js" type="module"></script>
-    <script src="/admin/js/dt/dataTables.cellEdit.js"></script>
-    {* {literal}
-    <style type="text/css">
-    </style>
-    {/literal} *}
+{$mainScriptsJs}
 </body>
 
 </html>
