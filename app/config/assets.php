@@ -48,7 +48,7 @@ Flight::view()->assign('LOGO64', LOGO64);
 Flight::view()->assign('base_url', __PUBLIC__);
 Flight::view()->assign('headLinks', $headlinks);
 
-$ACCESS_DENIED_HTML = (checkLogin(0) == [])
+$ACCESS_DENIED_HTML = ([] == [])
 ? '<div class="alert alert-danger d-flex align-items-center my-5 h2" role="alert">Access Denied - <i class="bi bi-database-slash"></i> - </div>'
 : '<div class="alert alert-success d-flex align-items-center my-5 h2" role="alert">Access Granted</div>';
 

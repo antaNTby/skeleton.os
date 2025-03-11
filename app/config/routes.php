@@ -1,5 +1,6 @@
 <?php
 
+use app\controllers\ApiAuthController;
 use app\controllers\ApiExampleController;
 use flight\Engine;
 use flight\net\Router;
