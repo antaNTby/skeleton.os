@@ -3,11 +3,6 @@
 use flight\database\PdoWrapper;
 use flight\debug\database\PdoQueryCapture;
 use flight\Engine;
-
-######### use Symfony\Component\VarDumper\Cloner\VarCloner;
-######### use Symfony\Component\VarDumper\Dumper\HtmlDumper;
-######### use Symfony\Component\VarDumper\VarDumper;
-use Symfony\Component\VarDumper\VarDumper;
 use Tracy\Debugger;
 
 /**

@@ -1,7 +1,19 @@
 <?php
 
-use Tracy\Debugger;
 use flight\debug\tracy\TracyExtensionLoader;
+use Symfony\Component\VarDumper\VarDumper;
+######### use Symfony\Component\VarDumper\Cloner\VarCloner;
+######### use Symfony\Component\VarDumper\Dumper\HtmlDumper;
+######### use Symfony\Component\VarDumper\VarDumper;
+use Tracy\Debugger;
+
+function sdump( $variable ) {
+	// Используем VarDumper для дампа переменной
+	VarDumper::dump( $variable );
+
+	// Используем Debugger для дампа переменной
+	// Debugger::dump($variable);
+}
 
 // Set the default timezone
 date_default_timezone_set( 'Europe/Minsk' );
