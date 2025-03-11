@@ -31,6 +31,7 @@ $router->group( '/api', function () use ( $router, $app ) {
 // Login
 $router->get( '/login', \app\controllers\LoginController::class . '->index' )->setAlias( 'login' );
 $router->post( '/login', \app\controllers\LoginController::class . '->authenticate' )->setAlias( 'login_authenticate' );
+
 $router->get( '/logout', \app\controllers\LogoutController::class . '->index' )->setAlias( 'logout' );
 
 ##############   // And empty group just simply groups together routes where you can assign a middleware.
