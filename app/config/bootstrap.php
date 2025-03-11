@@ -7,8 +7,8 @@
  */
 $ds = DIRECTORY_SEPARATOR;
 require __DIR__ . $ds . '..' . $ds . '..' . $ds . 'vendor' . $ds . 'autoload.php';
-if ( file_exists( __DIR__ . $ds . 'config.php' ) === false ) {
-	Flight::halt( 500, 'Config file not found. Please create a config.php file in the app/config directory to get started.' );
+if (file_exists(__DIR__ . $ds . 'config.php') === false) {
+    Flight::halt(500, 'Config file not found. Please create a config.php file in the app/config directory to get started.');
 }
 
 // It is better practice to not use static methods for everything. It makes your
@@ -62,7 +62,7 @@ require 'services.php';
 use flight\database\PdoWrapper;
 
 $dsn = 'mysql:host=' . $config['database']['host'] . ';dbname=' . $config['database']['dbname'] . ';charset=utf8mb4';
-Flight::register( 'db', PdoWrapper::class, [$dsn, $config['database']['user'], $config['database']['password']] );
+Flight::register('db', PdoWrapper::class, [$dsn, $config['database']['user'], $config['database']['password']]);
 
 /**
 Вот как вы можете использовать Smarty движок шаблонизации для ваших представлений:
@@ -74,32 +74,32 @@ require './Smarty/libs/Smarty.class.php';
 // Также передайте функцию обратного вызова для настройки Smarty при загрузке
 use Smarty\Smarty;
 
-Flight::register( 'view', Smarty::class, [], function ( Smarty $smarty ) {
-	// $smarty->setTemplateDir( './templates/' );
-	// $smarty->setCompileDir( './templates_c/' );
-	// $smarty->setConfigDir( './config/' );
-	// $smarty->setCacheDir( './cache/' );
+Flight::register('view', Smarty::class, [], function (Smarty $smarty) {
+    // $smarty->setTemplateDir( './templates/' );
+    // $smarty->setCompileDir( './templates_c/' );
+    // $smarty->setConfigDir( './config/' );
+    // $smarty->setCacheDir( './cache/' );
 
-	$smarty->setTemplateDir( __APP__ . '/tpl/' ); // здесь лежат шаблоны tpl.html
+    $smarty->setTemplateDir(__APP__ . '/tpl/'); // здесь лежат шаблоны tpl.html
 
-	$smarty->setCompileDir( __APP__ . '/smarty/compile_dir/' );  // здесь компилируюся *.php
-	$smarty->setConfigDir( __APP__ . '/smarty/smarty_config/' ); // незнаю
-	$smarty->setCacheDir( __APP__ . '/smarty/smarty_cache/' );
-	$smarty->compile_id = 'antFlight_';
-	// $smarty->force_compile = true;
-	// $smarty->testInstall();
+    $smarty->setCompileDir(__APP__ . '/smarty/compile_dir/');  // здесь компилируюся *.php
+    $smarty->setConfigDir(__APP__ . '/smarty/smarty_config/'); // незнаю
+    $smarty->setCacheDir(__APP__ . '/smarty/smarty_cache/');
+    $smarty->compile_id = 'antFlight_';
+    // $smarty->force_compile = true;
+    // $smarty->testInstall();
 
-} );
+});
 // $smarty = new smarty;
 // Для полноты картины вы также должны переопределить метод render по умолчанию в Flight:
 
-Flight::map( 'render', function (
-	string $template,
-	array  $data
+Flight::map('render', function (
+    string $template,
+    array $data
 ): void {
-	Flight::view()->assign( $data );
-	Flight::view()->display( $template );
-} );
+    Flight::view()->assign($data);
+    Flight::view()->display($template);
+});
 
 // At this point, your app should have all the instructions it needs and it'll
 // "start" processing everything. This is where the magic happens.
@@ -110,3 +110,29 @@ $app->start();
 .-._} } | | /  /\  \| .-. \  | |       | |  | { } |/  /\  \ | |     | .--' | {_} || .--' | .--'  }  {
 `----'  `-' `-'  `-'`-' `-'  `-'       `-'  `-' `-'`-'  `-' `-'     `-'    `-----'`-'    `-'     `--'
 */
+// Назначить данные шаблона
+
+$bootstrap_icons_css_local = <<<HTML
+<link rel="stylesheet" href="/lib/bootstrap-icons-1.11.3/font/bootstrap-icons.min.css">
+HTML;
+$bootstrap_css_local = <<<HTML
+<link rel="stylesheet" href="/lib/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+HTML;
+
+$bootstrap_icons_css_CDN = <<<HTML
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+HTML;
+$bootstrap_css_CDN = <<<HTML
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+HTML;
+
+$headlinks = [
+    'bootstrap_icons_css_local' => $bootstrap_icons_css_local,
+    'bootstrap_css_local'       => $bootstrap_css_local,
+    'bootstrap_icons_css_CDN'   => $bootstrap_icons_css_CDN,
+    'bootstrap_css_CDN'         => $bootstrap_css_CDN,
+];
+
+Flight::view()->assign('headLinks', $headlinks);
+Flight::view()->assign('name', 'Bob boboobbo');
+// Отобразить шаблон
