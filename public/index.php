@@ -78,15 +78,16 @@ require __APP__ . $ds . 'config' . $ds . 'bootstrap.php';
 #####################        die(ERROR_FORBIDDEN);
 #####################    }*/
 
-Flight::view()->display( 'admin.tpl.html' );
+// Flight::view()->display( 'admin.tpl.html' );
 // sdump($app);
-dd(
 
-	[
-		__DIR__,
-		__APP__,
-		__PUBLIC__,
+// dd(
 
-	]
+// 	[
+// 		__DIR__,
+// 		__APP__,
+// 		__PUBLIC__,
 
-); // array
+// 	]
+
+// );

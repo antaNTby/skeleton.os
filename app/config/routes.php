@@ -9,9 +9,12 @@ use flight\net\Router;
  * @var Router $router
  * @var Engine $app
  */
-$router->get( '/', function () use ( $app ) {
-	// $app->render('welcome', ['message' => 'You are gonna do great things! Goodluck, antaNT']);
-} );
+// $router->get( '/', function () use ( $app ) {
+// 	$app->render( 'welcome', ['message' => 'You are gonna do great things! Goodluck, antaNT'] );
+// } );
+
+// Home Page
+$router->get( '/', \app\controllers\HomeController::class . '->index' )->setAlias( 'home' );
 
 $router->get( '/hello-world/@name', function ( $name ) {
 	echo '<h1>Hello world! Oh hey ' . $name . '!</h1>';

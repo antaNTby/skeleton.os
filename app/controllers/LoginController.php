@@ -29,7 +29,7 @@ class LoginController extends BaseController {
 	 */
 	public function authenticate(): void {
 		$postData = $this->request()->data;
-
+		echo( $postData );
 		// When you actually do authentication, please use a secure method
 		// hashing method like password_hash() and password_verify()
 		// also, please don't encrypt passwords. Encrypting is not the same as hashing.
