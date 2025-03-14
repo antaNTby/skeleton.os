@@ -27,6 +27,8 @@
 $ds = DIRECTORY_SEPARATOR;
 define( '__APP__', dirname( __DIR__, 1 ) . $ds . 'app' );
 define( '__PUBLIC__', dirname( __DIR__, 1 ) . $ds . 'public' );
+/** Absolute path to project root */
+const ROOT = __DIR__ . '/..';
 
 // require __DIR__ . $ds . '..' . $ds . 'app' . $ds . 'config' . $ds . 'bootstrap.php';
 require __APP__ . $ds . 'config' . $ds . 'bootstrap.php';

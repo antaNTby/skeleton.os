@@ -11,5 +11,36 @@
             ]
         },
 
-    ]
+    ],
+    
+    "settings":
+    {
+        "default_encoding": "UTF-8",
+        // "default_encoding": "Cyrillic (Windows 1251)",
+        "fallback_encoding": "UTF-8",
+        // "fallback_encoding": "Cyrillic (Windows 1251)",
+        "tab_size": 4,
+
+
+        "theme": "Default Dark.sublime-theme",
+        // "color_scheme": "Bass Bowtruckle.sublime-color-scheme", //Color scheme Bass
+        // "color_scheme": "Bass Lagoon.sublime-color-scheme",
+        // "color_scheme": "Breakers.sublime-color-scheme",
+        // "color_scheme": "Cool & Clear.sublime-color-scheme",
+        "color_scheme": "Dark Knight.sublime-color-scheme", // active project
+        // "color_scheme": "Mariana.sublime-color-scheme",
+        // "color_scheme": "Monokai.sublime-color-scheme",
+        // "color_scheme": "Packages/Color Scheme - Creamy/Creamy.tmTheme",
+        // "color_scheme": "Sixteen.sublime-color-scheme",
+
+        // "font_face": "Consolas",
+        // "font_face": "Fira Sans",
+        "font_face": "Source Code Pro",
+        // "font_face": "Intel One Mono",
+        // "font_face": "Iosevka",
+        // "font_face": "JetBrains Mono",
+        // "font_face": "MonaspaceArgon",
+        // "font_face": "MonoLisa-Medium",
+        // "font_face": "MonoLisa-Regular",
+    },
 }
