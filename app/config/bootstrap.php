@@ -75,13 +75,8 @@ require './Smarty/libs/Smarty.class.php';
 use Smarty\Smarty;
 
 Flight::register( 'view', Smarty::class, [], function ( Smarty $smarty ) {
-	// $smarty->setTemplateDir( './templates/' );
-	// $smarty->setCompileDir( './templates_c/' );
-	// $smarty->setConfigDir( './config/' );
-	// $smarty->setCacheDir( './cache/' );
 
-	$smarty->setTemplateDir( __APP__ . '/tpl/' ); // здесь лежат шаблоны tpl.html
-
+	$smarty->setTemplateDir( __APP__ . '/tpl/' );                // здесь лежат шаблоны tpl.html
 	$smarty->setCompileDir( __APP__ . '/smarty/compile_dir/' );  // здесь компилируюся *.php
 	$smarty->setConfigDir( __APP__ . '/smarty/smarty_config/' ); // незнаю
 	$smarty->setCacheDir( __APP__ . '/smarty/smarty_cache/' );
@@ -90,9 +85,8 @@ Flight::register( 'view', Smarty::class, [], function ( Smarty $smarty ) {
 	// $smarty->testInstall();
 
 } );
-// $smarty = new smarty;
-// Для полноты картины вы также должны переопределить метод render по умолчанию в Flight:
 
+// Для полноты картины вы также должны переопределить метод render по умолчанию в Flight:
 Flight::map( 'render', function (
 	string $template,
 	array  $data
