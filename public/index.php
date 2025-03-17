@@ -1,5 +1,5 @@
 <?php
-
+ini_set( 'session.serialize_handler', 'php_serialize' );
 /*
  * FlightPHP Framework
  * @copyright   Copyright (c) 2024, Mike Cao <mike@mikecao.com>, n0nag0n <n0nag0n@sky-9.com>

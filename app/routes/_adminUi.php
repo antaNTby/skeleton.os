@@ -12,3 +12,9 @@
 Flight::route( '/login', \app\controllers\LoginController::class . '->index' )->setAlias( 'login' );
 
 Flight::route( 'POST /authenticate', \app\controllers\LoginController::class . '->authenticate' )->setAlias( 'authenticate' );
+
+// Flight::route( '/logout', function () {
+// 	$session = Flight::session();
+// 	$session->clear(); // Очистить все данные сессии
+// 	Flight::json( ['message' => 'Успешный выход'] );
+// } );

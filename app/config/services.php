@@ -2,13 +2,13 @@
 
 use flight\database\PdoWrapper;
 use flight\Engine;
+use flight\Session;
+use Smarty\Smarty;
 
 /**
  * @var array $config This comes from the returned array at the bottom of the config.php file
  * @var Engine $app
  */
-
-use Smarty\Smarty;
 
 $dsn = 'mysql:host=' . $config['database']['host'] . ';dbname=' . $config['database']['dbname'] . ';charset=utf8mb4';
 Flight::register( 'db', PdoWrapper::class, [$dsn, $config['database']['user'], $config['database']['password']] );
@@ -50,6 +50,19 @@ Flight::map( 'fetch', function (
 	Flight::view()->assign( $data );
 	Flight::view()->fetch( $template );
 } );
+
+// Регистрация сервиса сессии
+/*
+$app->register( 'session', Session::class, [
+	'save_path'      => __APP__ . '/cache',                 // Каталог для файлов сессий
+	'encryption_key' => '11111111000000001111111100000000', // Включить шифрование (рекомендуется 32 байта для AES-256-CBC)
+	'auto_commit'    => false,                              // Отключить автоматический коммит для ручного управления
+	'start_session'  => true,                               // Автоматически начинать сессию (по умолчанию: true)
+	'test_mode'      => false,                              // Включить тестовый режим для разработки
+] );
+*/
+
+Flight::register( 'session', Session::class );
 
 // dd( $ds );
 // uncomment the following line for MySQL

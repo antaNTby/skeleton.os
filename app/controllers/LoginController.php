@@ -2,6 +2,7 @@
 namespace app\controllers;
 
 use flight\Engine;
+use flight\Session;
 
 ### use Ghostff\Session\Session;
 
@@ -52,22 +53,26 @@ class LoginController extends BaseController {
 	 * @return void
 	 */
 	public function authenticate(): void {
+
+		$session = $this->session();
+
 		$postData = $this->request()->data;
 		// dd( $postData );
 		if ( $postData->userpw === '555' ) {
-			$this->session()->set( 'log', $postData->userlogin );
-			bdump( [$postData, 'strrrr' => "userpw === '555'"] );
+			$session->set( 'log', $postData->userlogin );
+			// bdump( [$postData, 'strrrr' => "userpw === '555'"] );
 
 			// Sets the current user role
 			if ( $postData->userlogin === 'admin' ) {
-				$this->session()->set( 'role', 'admin' );
+				$session->set( 'role', 'admin' );
 			} else if ( $postData->userlogin === 'editor' ) {
-				$this->session()->set( 'role', 'editor' );
+				$session->set( 'role', 'editor' );
 			} else {
-				$this->session()->set( 'role', 'user' );
+				$session->set( 'role', 'user' );
 			}
-			$this->session()->commit();
-			bdump( $this->session() );
+			$session->commit();
+
+			bdump( [$session->id()] );
 
 			$this->redirect( '/' );
 
@@ -77,3 +82,32 @@ class LoginController extends BaseController {
 		$this->redirect( $this->getUrl( 'login' ) );
 	}
 }
+
+/*
+
+session.serialize_handler чем отличается php и php_serialize
+Директива session.serialize_handler в PHP определяет метод (обработчик) для сериализации и десериализации данных сессии. Варианты php и php_serialize имеют ключевые различия в подходе к обработке данных:
+
+1. php
+Описание: Этот метод использует старый, собственный формат сериализации PHP. Он сохраняет данные в текстовом формате, который компактный и эффективный, но поддерживает только базовые типы данных (массивы, строки, числа).
+
+Особенности:
+
+Более простой, но устаревший формат.
+
+Не поддерживает сериализацию объектов (например, если в сессии есть экземпляры классов).
+
+Ограничен по функциональности в современных версиях PHP.
+
+2. php_serialize
+Описание: Этот метод использует встроенные функции serialize() и unserialize() для обработки данных сессии. Это современный стандарт в PHP, рекомендованный для большей гибкости и совместимости.
+
+Особенности:
+
+Поддерживает сложные структуры данных, включая объекты.
+
+Позволяет сериализовать данные, содержащие ссылки.
+
+Широко используется, особенно в современных PHP-проектах.
+
+*/
