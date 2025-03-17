@@ -2,7 +2,6 @@
 
 use flight\database\PdoWrapper;
 use flight\Engine;
-use Ghostff\Session\Session;
 
 /**
  * @var array $config This comes from the returned array at the bottom of the config.php file
@@ -70,9 +69,9 @@ Flight::map( 'fetch', function (
 // Redis? This is where you'd set that up
 // $app->register('redis', Redis::class, [ $config['redis']['host'], $config['redis']['port'] ]);
 
-$app->register( 'session', Session::class, [__APP__ . '/smarty/smarty_config/', bin2hex( random_bytes( 32 ) )], function ( Session $session ) {
-	$session->updateConfiguration( [
-		Session::CONFIG_AUTO_COMMIT => true,
-	] );
-}
-);
+// $app->register( 'session', Session::class, [__APP__ . '/smarty/smarty_config/', bin2hex( random_bytes( 32 ) )], function ( Session $session ) {
+// 	$session->updateConfiguration( [
+// 		Session::CONFIG_AUTO_COMMIT => true,
+// 	] );
+// }
+// );

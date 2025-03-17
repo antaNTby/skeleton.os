@@ -2,7 +2,8 @@
 namespace app\controllers;
 
 use flight\Engine;
-use Ghostff\Session\Session;
+
+### use Ghostff\Session\Session;
 
 class LoginController extends BaseController {
 	/**

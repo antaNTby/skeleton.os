@@ -7,7 +7,8 @@ use flight\Engine;
 use flight\net\Request;
 use flight\net\Response;
 use flight\Permission;
-use Ghostff\Session\Session;
+
+##### // use Ghostff\Session\Session;
 
 /**
  * These help with IDE autocompletion and type hinting if you
@@ -15,7 +16,7 @@ use Ghostff\Session\Session;
  *
  * @method Request request()
  * @method Response response()
- * @method Session session()
+ *##### @method Session session()
  * @method PdoWrapper db()
  * @method Permission permission()
  * @method string getUrl(string $route, array $params = [])
