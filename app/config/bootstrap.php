@@ -59,42 +59,6 @@ require 'routes.php';
  */
 require 'services.php';
 
-use flight\database\PdoWrapper;
-
-$dsn = 'mysql:host=' . $config['database']['host'] . ';dbname=' . $config['database']['dbname'] . ';charset=utf8mb4';
-Flight::register( 'db', PdoWrapper::class, [$dsn, $config['database']['user'], $config['database']['password']] );
-
-/**
-Вот как вы можете использовать Smarty движок шаблонизации для ваших представлений:
-
-// Загрузить библиотеку Smarty
-require './Smarty/libs/Smarty.class.php';
- */
-// Зарегистрировать Smarty как класс представления
-// Также передайте функцию обратного вызова для настройки Smarty при загрузке
-use Smarty\Smarty;
-
-Flight::register( 'view', Smarty::class, [], function ( Smarty $smarty ) {
-
-	$smarty->setTemplateDir( __APP__ . '/tpl/' );                // здесь лежат шаблоны tpl.html
-	$smarty->setCompileDir( __APP__ . '/smarty/compile_dir/' );  // здесь компилируюся *.php
-	$smarty->setConfigDir( __APP__ . '/smarty/smarty_config/' ); // незнаю
-	$smarty->setCacheDir( __APP__ . '/smarty/smarty_cache/' );
-	$smarty->compile_id    = 'antFlight_';
-	$smarty->force_compile = true;
-	// $smarty->testInstall();
-
-} );
-
-// Для полноты картины вы также должны переопределить метод render по умолчанию в Flight:
-Flight::map( 'render', function (
-	string $template,
-	array  $data
-): void {
-	Flight::view()->assign( $data );
-	Flight::view()->display( $template );
-} );
-
 // At this point, your app should have all the instructions it needs and it'll
 // "start" processing everything. This is where the magic happens.
 $app->start();

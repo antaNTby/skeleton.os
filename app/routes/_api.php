@@ -2,7 +2,7 @@
 
 Flight::route( '/api/versions', function (): void {
 	// Don't do this in your houses, only for testing purposes 🚫
-	$composerJson = json_decode( file_get_contents( ROOT . '/composer.json' ), true );
+	$composerJson = json_decode( file_get_contents( __ROOT__ . '/composer.json' ), true );
 	// $packageJson = json_decode(file_get_contents(ROOT . '/package.json'), true);
 
 	echo json_encode( [

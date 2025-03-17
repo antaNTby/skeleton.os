@@ -6,10 +6,6 @@
 .-._} } | | /  /\  \| .-. \  | |       | |  | { } |/  /\  \ | |     | .--' | {_} || .--' | .--'  }  {
 `----'  `-' `-'  `-'`-' `-'  `-'       `-'  `-' `-'`-'  `-' `-'     `-'    `-----'`-'    `-'     `--'
 */
-// Назначить данные шаблона
-const SITE_URL = "--== SKELETON ==--";
-const LOGO256  = 'logo256.jpg'; //   {$smarty.const.LOGO256}
-const LOGO64   = 'logo64.jpg';  //   {$smarty.const.LOGO64}
 
 $_SITE_URL = SITE_URL;
 $_LOGO256  = LOGO256;
@@ -35,20 +31,20 @@ $uiAdmin_css = '<link rel="stylesheet" type="text/css" href="/lib/datatables/dat
     <link rel="stylesheet" type="text/css" href="/lib/uiAdmin.css">';
 
 $headlinks = [
-    'bootstrap_icons_css_local' => $bootstrap_icons_css_local,
-    'bootstrap_css_local'       => $bootstrap_css_local,
-    'bootstrap_icons_css_CDN'   => $bootstrap_icons_css_CDN,
-    'bootstrap_css_CDN'         => $bootstrap_css_CDN,
-    'datatables_css_local'      => $datatables_css_local,
-    'uiAdmin_css'               => $uiAdmin_css,
+	'bootstrap_icons_css_local' => $bootstrap_icons_css_local,
+	'bootstrap_css_local'       => $bootstrap_css_local,
+	'bootstrap_icons_css_CDN'   => $bootstrap_icons_css_CDN,
+	'bootstrap_css_CDN'         => $bootstrap_css_CDN,
+	'datatables_css_local'      => $datatables_css_local,
+	'uiAdmin_css'               => $uiAdmin_css,
 ];
 
-Flight::view()->assign('LOGO256', LOGO256);
-Flight::view()->assign('LOGO64', LOGO64);
-Flight::view()->assign('base_url', __PUBLIC__);
-Flight::view()->assign('headLinks', $headlinks);
+Flight::view()->assign( 'LOGO256', LOGO256 );
+Flight::view()->assign( 'LOGO64', LOGO64 );
+Flight::view()->assign( 'base_url', __PUBLIC__ );
+Flight::view()->assign( 'headLinks', $headlinks );
 
-$ACCESS_DENIED_HTML = ([] == [])
+$ACCESS_DENIED_HTML = ( [] == [] )
 ? '<div class="alert alert-danger d-flex align-items-center my-5 h2" role="alert">Access Denied - <i class="bi bi-database-slash"></i> - </div>'
 : '<div class="alert alert-success d-flex align-items-center my-5 h2" role="alert">Access Granted</div>';
 
@@ -113,4 +109,4 @@ $ERROR_FORBIDDEN_HTML = <<<HTML
 </html>
 HTML;
 
-define('ERROR_FORBIDDEN', $ERROR_FORBIDDEN_HTML);
+define( 'ERROR_FORBIDDEN', $ERROR_FORBIDDEN_HTML );

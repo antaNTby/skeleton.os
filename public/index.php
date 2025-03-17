@@ -25,10 +25,15 @@
    by Dick Williams, rjw1@tyrell.net
 */
 $ds = DIRECTORY_SEPARATOR;
+define( '__ROOT__', __DIR__ . $ds . '..' );
 define( '__APP__', dirname( __DIR__, 1 ) . $ds . 'app' );
 define( '__PUBLIC__', dirname( __DIR__, 1 ) . $ds . 'public' );
+
 /** Absolute path to project root */
-const ROOT = __DIR__ . '/..';
+// Назначить данные шаблона
+const SITE_URL = '--== SKELETON ==--';
+const LOGO256  = 'logo256.jpg'; //   {$smarty.const.LOGO256}
+const LOGO64   = 'logo64.jpg';  //   {$smarty.const.LOGO64}
 
 // require __DIR__ . $ds . '..' . $ds . 'app' . $ds . 'config' . $ds . 'bootstrap.php';
 require __APP__ . $ds . 'config' . $ds . 'bootstrap.php';
@@ -80,16 +85,19 @@ require __APP__ . $ds . 'config' . $ds . 'bootstrap.php';
 #####################        die(ERROR_FORBIDDEN);
 #####################    }*/
 
-// Flight::view()->display( 'admin.tpl.html' );
+$tplFetched = Flight::view()->fetch( 'admin.tpl.html' );
 // sdump($app);
 
-// dd(
+$app->fetch( 'string:The current smarty version is: {$smarty.version}.' );
 
-// 	[
-// 		__DIR__,
-// 		__APP__,
-// 		__PUBLIC__,
+dump(
+	[
+		__DIR__,
+		__ROOT__,
+		__APP__,
+		__PUBLIC__,
 
-// 	]
+	]
+);
 
-// );
+echo $tplFetched;
