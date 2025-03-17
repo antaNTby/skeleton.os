@@ -52,8 +52,8 @@ Flight::map( 'fetch', function (
 } );
 
 // Регистрация сервиса сессии
-/*
-$app->register( 'session', Session::class, [
+
+/*$app->register( 'session', Session::class, $config = [
 	'save_path'      => __APP__ . '/cache',                 // Каталог для файлов сессий
 	'encryption_key' => '11111111000000001111111100000000', // Включить шифрование (рекомендуется 32 байта для AES-256-CBC)
 	'auto_commit'    => false,                              // Отключить автоматический коммит для ручного управления
