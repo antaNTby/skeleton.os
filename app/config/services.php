@@ -1,13 +1,15 @@
 <?php
 
 use flight\database\PdoWrapper;
+use flight\Engine;
+use Ghostff\Session\Session;
 
 /**
  * @var array $config This comes from the returned array at the bottom of the config.php file
  * @var Engine $app
  */
 
-use flight\Engine;
+use Smarty\Smarty;
 
 $dsn = 'mysql:host=' . $config['database']['host'] . ';dbname=' . $config['database']['dbname'] . ';charset=utf8mb4';
 Flight::register( 'db', PdoWrapper::class, [$dsn, $config['database']['user'], $config['database']['password']] );
@@ -20,7 +22,6 @@ require './Smarty/libs/Smarty.class.php';
  */
 // Зарегистрировать Smarty как класс представления
 // Также передайте функцию обратного вызова для настройки Smarty при загрузке
-use Smarty\Smarty;
 
 Flight::register( 'view', Smarty::class, [], function ( Smarty $smarty ) {
 
@@ -36,7 +37,7 @@ Flight::register( 'view', Smarty::class, [], function ( Smarty $smarty ) {
 
 // Для полноты картины вы также должны переопределить метод render по умолчанию в Flight:
 Flight::map( 'render', function (
-	string $template,
+	string $template = 'index.tpl.html',
 	array  $data = []
 ): void {
 	Flight::view()->assign( $data );
@@ -44,7 +45,7 @@ Flight::map( 'render', function (
 } );
 
 Flight::map( 'fetch', function (
-	string $template,
+	string $template = 'index.tpl.html',
 	array  $data = []
 ): void {
 	Flight::view()->assign( $data );
@@ -68,3 +69,10 @@ Flight::map( 'fetch', function (
 
 // Redis? This is where you'd set that up
 // $app->register('redis', Redis::class, [ $config['redis']['host'], $config['redis']['port'] ]);
+
+$app->register( 'session', Session::class, [__APP__ . '/smarty/smarty_config/', bin2hex( random_bytes( 32 ) )], function ( Session $session ) {
+	$session->updateConfiguration( [
+		Session::CONFIG_AUTO_COMMIT => true,
+	] );
+}
+);

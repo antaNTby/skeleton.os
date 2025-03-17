@@ -85,19 +85,8 @@ require __APP__ . $ds . 'config' . $ds . 'bootstrap.php';
 #####################        die(ERROR_FORBIDDEN);
 #####################    }*/
 
-$tplFetched = Flight::view()->fetch( 'admin.tpl.html' );
-// sdump($app);
+// $tplFetched = Flight::view()->fetch( 'admin.tpl.html' );
+// // sdump($app);
+// $app->fetch( 'string:The current smarty version is: {$smarty.version}.' );
 
-$app->fetch( 'string:The current smarty version is: {$smarty.version}.' );
-
-dump(
-	[
-		__DIR__,
-		__ROOT__,
-		__APP__,
-		__PUBLIC__,
-
-	]
-);
-
-echo $tplFetched;
+// echo $tplFetched;
