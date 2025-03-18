@@ -6,7 +6,7 @@ use flight\Session;
 
 ### use Ghostff\Session\Session;
 
-class LoginController extends BaseController {
+class LogoutController extends BaseController {
 	/**
 	 * Index
 	 *
@@ -18,71 +18,12 @@ class LoginController extends BaseController {
 	public function __construct( $app ) {
 		$this->app = $app;
 	}
-
 	public function index(): void {
-		$admin_main_content_template = 'login.tpl.html';
-		$this->app->render( 'index.tpl.html', [
+		$session = $this->session();
 
-			'admin_main_content_template' => $admin_main_content_template,
-			'SITE_URL'                    => SITE_URL,
-			'LOGO256'                     => LOGO256,
-			'ACCESS_DENIED_HTML'          => 0,
-		] );
-
-		// bdump(
-		// 	[
-		// 		__DIR__,
-		// 		__ROOT__,
-		// 		__APP__,
-		// 		__PUBLIC__,
-		// 		SITE_URL,
-		// 		LOGO256,
-		// 		LOGO64,
-
-		// 	]
-		// );
-
-	}
-
-	/**
-	 * Authenticate
-	 *
-	 * @return void
-	 */
-	public function authenticate(): void {
-
-		$session  = $this->session();
-		$postData = $this->request()->data;
-		// Вы можете получить доступ к полному URL запроса, используя метод getFullUrl():
-		$url = $this->app->request()->getFullUrl();
-		// dd( $postData );
-		if ( $postData->userpw === '555' ) {
-			$session->set( 'log', $postData->userlogin );
-			// bdump( [$postData, 'strrrr' => "userpw === '555'"] );
-
-			// Sets the current user role
-			if ( $postData->userlogin === 'admin' ) {
-				$session->set( 'role', 'root' );
-			} else if ( $postData->userlogin === 'editor' ) {
-				$session->set( 'role', 'editor' );
-			} else {
-				$session->set( 'role', 'guest' );
-			}
-			$session->commit();
-
-			bdump(
-				[
-					$session->id(),
-					$session->get( 'log' ),
-					$session->get( 'role' ),
-					$url,
-				] );
-
-			$this->redirect( $url );
-
-			exit;
-		}
-
+		$session->delete( 'log' );
+		$session->delete( 'role' );
+		$session->destroy( $session->id() );
 		$this->redirect( '\login' );
 	}
 }

@@ -1,15 +1,11 @@
 <?php
-// echo '_adminUi.php';
-// Маршрут для отображения формы авторизации
-// Flight::route( '/login', function () {
-// 	echo '<form method="post" action="/login">
-//             <label>Логин: <input type="text" name="username"></label><br>
-//             <label>Пароль: <input type="password" name="password"></label><br>
-//             <button type="submit">Войти</button>
-//           </form>';
-// } );
+
+use app\middleware;
+use flight\Engine;
+use flight\Session;
 
 Flight::route( '/login', \app\controllers\LoginController::class . '->index' )->setAlias( 'login' );
+Flight::route( '/logout', \app\controllers\LogoutController::class . '->index' )->setAlias( 'logout' );
 
 Flight::route( 'POST /authenticate', \app\controllers\LoginController::class . '->authenticate' )->setAlias( 'authenticate' );
 
@@ -18,3 +14,9 @@ Flight::route( 'POST /authenticate', \app\controllers\LoginController::class . '
 // 	$session->clear(); // Очистить все данные сессии
 // 	Flight::json( ['message' => 'Успешный выход'] );
 // } );
+
+$LoginMiddleware = new middleware\LoginMiddleware( $app );
+Flight::route( '*', function () {
+	$admin_main_content_template = 'admin.tpl.html';
+	Flight::render( 'index.tpl.html', ['admin_main_content_template' => $admin_main_content_template] );
+} )->addMiddleware( $LoginMiddleware );
