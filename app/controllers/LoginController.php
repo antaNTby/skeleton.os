@@ -64,22 +64,28 @@ class LoginController extends BaseController {
 
 			// Sets the current user role
 			if ( $postData->userlogin === 'admin' ) {
-				$session->set( 'role', 'admin' );
+				$session->set( 'role', 'root admin' );
 			} else if ( $postData->userlogin === 'editor' ) {
 				$session->set( 'role', 'editor' );
 			} else {
-				$session->set( 'role', 'user' );
+				$session->set( 'role', 'guest' );
 			}
 			$session->commit();
 
-			bdump( [$session->id()] );
+			bdump(
+				[
 
-			$this->redirect( '/' );
+					$session->id(),
+					$session->get( 'log' ),
+					$session->get( 'role' ),
+				] );
+
+			$this->redirect( '\\' );
 
 			exit;
 		}
 
-		$this->redirect( $this->getUrl( 'login' ) );
+		$this->redirect( '\login' );
 	}
 }
 

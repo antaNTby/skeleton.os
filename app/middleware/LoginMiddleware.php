@@ -1,9 +1,10 @@
 <?php
 //LoginMiddleware.php
 
-namespace app\middlewares;
+namespace app\middleware;
 
 use flight\Engine;
+use flight\Session;
 
 class LoginMiddleware {
 
@@ -15,8 +16,9 @@ class LoginMiddleware {
 	}
 
 	public function before(): void {
-		if ( $this->app->session()->exist( 'user' ) === false ) {
-			$this->app->redirect( $this->app->getUrl( 'login' ) );
+		if ( $this->app->session()->get( 'log' ) !== 'admin' ) {
+			bdump( 'middleware worked!' );
+			$this->app->redirect( '/login' );
 		}
 	}
 }

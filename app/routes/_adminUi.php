@@ -13,13 +13,6 @@ Flight::route( '/login', \app\controllers\LoginController::class . '->index' )->
 
 Flight::route( 'POST /authenticate', \app\controllers\LoginController::class . '->authenticate' )->setAlias( 'authenticate' );
 
-Flight::route( '/post-login', function () {
-	$session = Flight::session();
-	                            // $session->regenerate();     // Новый ID, сохранить данные
-	                            // ИЛИ
-	$session->regenerate( true ); // Новый ID, удалить старые данные
-} );
-
 // Flight::route( '/logout', function () {
 // 	$session = Flight::session();
 // 	$session->clear(); // Очистить все данные сессии
