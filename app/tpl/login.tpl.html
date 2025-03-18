@@ -22,6 +22,11 @@
             </form>
         </div>
     </div>
+    {if ACCESS_DENIED_HTML neq ''}
+    <div class="row justify-content-center">
+    {$smarty.const.ACCESS_DENIED_HTML}
+    </div>
+    {/if}
 </div>
 
 <script>

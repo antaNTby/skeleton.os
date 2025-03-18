@@ -78,6 +78,7 @@ class LoginController extends BaseController {
 					$url,
 				] );
 
+			$this->app->view()->assign( 'ACCESS_DENIED_HTML', '' );
 			$this->redirect( $url );
 
 			exit;
