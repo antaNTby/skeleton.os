@@ -16,11 +16,11 @@ class LoginMiddleware {
 	}
 
 	public function before(): void {
-		if ( $this->app->session()->get( 'log' ) !== 'ad777min' ) {
+		if ( $this->app->session()->get( 'log' ) !== 'admin' ) {
 			bdump( 'middleware worked!' );
 			// $this->app->jsonHalt( ['message' => 'Unauthorized'], 401 );
 			$this->app->view()->assign( 'ACCESS_DENIED_HTML', '<div class="alert alert-danger d-flex align-items-center my-5 h2" role="alert">Access Denied - <i class="bi bi-database-slash"></i> - </div>' );
-			// $this->app->redirect( '/login' );
+			$this->app->redirect( '/login' );
 
 			// $admin_main_content_template = 'login.tpl.html';
 			// $this->app->render( 'index.tpl.html', [

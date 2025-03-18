@@ -54,7 +54,8 @@ class LoginController extends BaseController {
 		$session  = $this->session();
 		$postData = $this->request()->data;
 		// Вы можете получить доступ к полному URL запроса, используя метод getFullUrl():
-		$url = $this->app->request()->getFullUrl();
+		$url     = $this->app->request()->getFullUrl();
+		$referer = $this->app->request()->referrer;
 		// dd( $postData );
 		if ( $postData->userpw === '555' ) {
 			$session->set( 'log', $postData->userlogin );
@@ -76,10 +77,11 @@ class LoginController extends BaseController {
 					$session->get( 'log' ),
 					$session->get( 'role' ),
 					$url,
+					$referer,
 				] );
 
 			$this->app->view()->assign( 'ACCESS_DENIED_HTML', '' );
-			$this->redirect( $url );
+			// $this->redirect( $referer );
 
 			exit;
 		}
