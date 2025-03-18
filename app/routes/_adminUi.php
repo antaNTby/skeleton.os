@@ -18,5 +18,11 @@ Flight::route( 'POST /authenticate', \app\controllers\LoginController::class . '
 $LoginMiddleware = new middleware\LoginMiddleware( $app );
 Flight::route( '*', function () {
 	$admin_main_content_template = 'admin.tpl.html';
-	Flight::render( 'index.tpl.html', ['admin_main_content_template' => $admin_main_content_template] );
+	Flight::render( 'index.tpl.html', [
+		'admin_main_content_template' => $admin_main_content_template,
+		'container_width'             => 'container',
+		'admin_main_content_template' => $admin_main_content_template,
+		'admin_main_content_template' => $admin_main_content_template,
+
+	] );
 } )->addMiddleware( $LoginMiddleware );

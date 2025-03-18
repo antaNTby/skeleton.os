@@ -20,13 +20,13 @@ class LoginController extends BaseController {
 	}
 
 	public function index(): void {
-		$admin_main_content_template = 'login.tpl.html';
-		$this->app->render( 'index.tpl.html', [
+		// $admin_main_content_template = 'login.tpl.html';
+		$this->app->render( 'login.tpl.html', [
 
-			'admin_main_content_template' => $admin_main_content_template,
-			'SITE_URL'                    => SITE_URL,
-			'LOGO256'                     => LOGO256,
-			'ACCESS_DENIED_HTML'          => 0,
+			// 'admin_main_content_template' => $admin_main_content_template,
+			'SITE_URL'           => SITE_URL,
+			'LOGO256'            => LOGO256,
+			'ACCESS_DENIED_HTML' => 0,
 		] );
 
 		// bdump(
@@ -54,8 +54,8 @@ class LoginController extends BaseController {
 		$session  = $this->session();
 		$postData = $this->request()->data;
 		// Вы можете получить доступ к полному URL запроса, используя метод getFullUrl():
-		$url     = $this->app->request()->getFullUrl();
-		$referer = $this->app->request()->referrer;
+		$url      = $this->app->request()->getFullUrl();
+		$referrer = $this->app->request()->referrer;
 		// dd( $postData );
 		if ( $postData->userpw === '555' ) {
 			$session->set( 'log', $postData->userlogin );
@@ -71,20 +71,22 @@ class LoginController extends BaseController {
 			}
 			$session->commit();
 
-			bdump(
-				[
-					$session->id(),
-					$session->get( 'log' ),
-					$session->get( 'role' ),
-					$url,
-					$referer,
-				] );
+			// bdump(
+			// 	[
+			// 		$session->id(),
+			// 		$session->get( 'log' ),
+			// 		$session->get( 'role' ),
+			// 		$url,
+			// 		$referrer,
+			// 	] );
 
 			$this->app->view()->assign( 'ACCESS_DENIED_HTML', '' );
-			// $this->redirect( $referer );
+			$this->redirect( '/' );
 
 			exit;
 		}
+
+		$this->app->view()->assign( 'ACCESS_DENIED_HTML', '<div class="alert alert-danger d-flex align-items-center my-5 h2" role="alert">Access Denied - <i class="bi bi-database-slash"></i> - </div>' );
 
 		$this->redirect( '\login' );
 	}

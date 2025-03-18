@@ -1,27 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html class="h-100" lang="ru-BY">{* text-bg-secondary bg-opacity-50 *}
+{assign var=use_offcanvas_menu value=1}
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" sizes=16x16 href="/lib/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>index.tpl.html</title>
+    {* HEADLINKS *}
+    {$headLinks.bootstrap_icons_css_local}
+    {$headLinks.bootstrap_css_local}
+    {* {$headLinks.datatables_css_local} *}
+    {$headLinks.uiAdmin_css}
+    {* HEADLINKS END*}
+    {literal}
+    <style tye="text/css">
+    div.offcanvas {
+        background-color: #8888aa88;
+    }
 
-	<title>index.tpl.html</title>
+    div.offcanvas-header {
+        background-color: #222222;
+    }
 
-	{* HEADLINKS *}
-	    {$headLinks.bootstrap_icons_css_local}
-	    {$headLinks.bootstrap_css_local}
-	    {* {$headLinks.datatables_css_local} *}
-	    {$headLinks.uiAdmin_css}
-	{* HEADLINKS END*}
-
-
+    div#uiControl {
+        background-color: #8888aa02;
+    }
+    </style>
+    {/literal}
 </head>
-<body>
-<h1 class="bg-primary p-4 m-4">index.tpl.html</h1>
-<main>
-	{include file="$admin_main_content_template"}
-</main>
+
+<body class="d-flex flex-column h-100" style="overflow-y: scroll;"> {* class="d-flex flex-column h-100" style="overflow-y: scroll;" *}
+    <header>
+        {include file="admin__navbar.tpl.html"}
+    </header>
+    <div class="layout gap-1">
+        <aside id="uiAside" class="layout-sidebar border-end">
+            {include file="admin__menu_accordion.tpl.html"}
+        </aside>
+        <main id="uiMain" class="layout-main px-1">
+            {include file="$admin_main_content_template"}
+        </main>
+    </div>
+    <footer id="uiFooter" class="d-block mt-auto text-bg-dark bg-opacity-75">
+        {include file="admin__footer.tpl.html"}
+    </footer>
+
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <script src="/lib/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/DataTables/datatables.js"></script>
+    {* <script src="/lib/datatables/dataTables.cellEdit.js"></script> *}
+    {* my scripts *}
+    {* <script src="/admin/js/admin.js"></script> *}
+    {* <script src="/admin/js/index.js" type="module"></script> *}
+    {* <script src="/admin/js/dt/dataTables.cellEdit.js"></script> *}
+
+
+
+
 
 </body>
+
 </html>
