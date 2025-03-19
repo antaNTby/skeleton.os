@@ -11,6 +11,7 @@ Flight::route( '/logout', \app\controllers\LogoutController::class . '->index' )
 
 Flight::route( 'POST /authenticate', \app\controllers\LoginController::class . '->authenticate' )->setAlias( 'authenticate' );
 
+Flight::route( '/admin', \app\controllers\LoginController::class . '->authenticate' )->setAlias( 'admin' );
 // Flight::route( '/logout', function () {
 // 	$session = Flight::session();
 // 	$session->clear(); // Очистить все данные сессии

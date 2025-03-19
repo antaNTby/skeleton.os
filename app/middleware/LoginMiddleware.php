@@ -28,6 +28,8 @@ class LoginMiddleware {
 
 		bdump( 'AFTER' );
 
+		\Flight::view()->assign( ['SSSS' => $this->app->get( 'SSSS' )] );
+
 	}
 
 }

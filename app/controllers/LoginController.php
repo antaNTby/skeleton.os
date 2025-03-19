@@ -55,7 +55,7 @@ class LoginController extends BaseController {
 			}
 			$session->commit();
 
-			$this->app->set( 'SSSS', '<pre>cewfwe fbregfefb rtnBEFORE BEFORE BEFORE' );
+			$this->app->set( 'SSSS', '<pre>SSSSSSSSSSSSSSSSSSSS' );
 
 			$this->redirect( '/' );
 

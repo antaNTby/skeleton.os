@@ -40,10 +40,12 @@
             {include file="admin__menu_accordion.tpl.html"}
         </aside>
         <main id="uiMain" class="layout-main px-1">
-
+<pre>
+    
                 {$ACCESS_DENIED_HTML}
-                ---{$SSS}---
+                ---{$SSS|debug_print_var}---
 
+</pre>
 
 
             {include file="$admin_main_content_template"}
