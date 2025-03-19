@@ -1,6 +1,4 @@
 <?php
-//LoginMiddleware.php
-
 namespace app\middleware;
 
 use flight\Engine;
@@ -16,22 +14,20 @@ class LoginMiddleware {
 	}
 
 	public function before(): void {
+
+		// прверяем совпадает ли авторизованный пользователь с admin
 		if ( $this->app->session()->get( 'log' ) !== 'admin' ) {
-			bdump( 'middleware worked!' );
+			$this->app->halt( 401, '<a href="/login"> 401-Unauthorized </a>' );
 			// $this->app->jsonHalt( ['message' => 'Unauthorized'], 401 );
-			$this->app->view()->assign( 'ACCESS_DENIED_HTML', '<div class="alert alert-danger d-flex align-items-center my-5 h2" role="alert">Access Denied - <i class="bi bi-database-slash"></i> - </div>' );
-			$this->app->redirect( '/login' );
-
-			// $admin_main_content_template = 'login.tpl.html';
-			// $this->app->render( 'index.tpl.html', [
-
-			// 	'admin_main_content_template' => $admin_main_content_template,
-			// 	'SITE_URL'                    => SITE_URL,
-			// 	'LOGO256'                     => LOGO256,
-			// 	'ACCESS_DENIED_HTML'          => '<div class="alert alert-danger d-flex align-items-center my-5 h2" role="alert">Access Denied - <i class="bi bi-database-slash"></i> - </div>',
-			// ] );
-
+			// $this->app->redirect( ' / login' );
 		}
 
 	}
+
+	public function after(): void {
+
+		bdump( 'AFTER' );
+
+	}
+
 }
