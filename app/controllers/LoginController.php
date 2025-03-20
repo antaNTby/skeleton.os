@@ -24,6 +24,7 @@ class LoginController extends BaseController {
 			'SITE_URL'           => SITE_URL,
 			'LOGO256'            => LOGO256,
 			'ACCESS_DENIED_HTML' => 0,
+			'base_url'           => __PUBLIC__,
 		] );
 
 	}
@@ -48,22 +49,25 @@ class LoginController extends BaseController {
 			// Sets the current user role
 			if ( $postData->userlogin === 'admin' ) {
 				$session->set( 'role', 'root' );
-			} else if ( $postData->userlogin === 'editor' ) {
-				$session->set( 'role', 'editor' );
+			} else if ( $postData->userlogin === 'user' ) {
+				$session->set( 'role', 'user' );
 			} else {
 				$session->set( 'role', 'guest' );
 			}
 			$session->commit();
-
-			$this->app->set( 'SSSS', '<pre>SSSSSSSSSSSSSSSSSSSS' );
-
 			$this->redirect( '/' );
 
 			exit;
 		}
-
-		$this->app->set( 'SSSS', '<pre>BEFORE BEFORE BEFORE' );
-
+		$this->redirect( '\login' );
+	}
+	user;
+	public function logout(): void {
+		$session = $this->session();
+		$session->delete( 'log' );
+		$session->delete( 'role' );
+		$session->commit();
+		$session->destroy( $session->id() );
 		$this->redirect( '\login' );
 	}
 }

@@ -7,7 +7,7 @@ use flight\Session;
 $LoginMiddleware = new middleware\LoginMiddleware( $app );
 
 Flight::route( '/login', \app\controllers\LoginController::class . '->index' )->setAlias( 'login' );
-Flight::route( '/logout', \app\controllers\LogoutController::class . '->index' )->setAlias( 'logout' );
+Flight::route( '/logout', \app\controllers\LoginController::class . '->logout' )->setAlias( 'logout' );
 
 Flight::route( 'POST /authenticate', \app\controllers\LoginController::class . '->authenticate' )->setAlias( 'authenticate' );
 
