@@ -3,6 +3,9 @@
 use flight\database\PdoWrapper;
 use flight\Engine;
 use flight\Session;
+use Monolog\Handler\StreamHandler;
+use Monolog\Level;
+use Monolog\Logger;
 use Smarty\Smarty;
 
 /**
@@ -91,8 +94,5 @@ Flight::register( 'session', Session::class );
 
 // Register the logger with Flight
 Flight::register( 'log', Monolog\Logger::class, ['name'], function ( Monolog\Logger $log ) {
-	$log->pushHandler( new Monolog\Handler\StreamHandler( 'path/to/your.log', Monolog\Logger::WARNING ) );
+	$log->pushHandler( new Monolog\Handler\StreamHandler( __APP__ . DIRECTORY_SEPARATOR . 'log.log', Monolog\Logger::WARNING ) );
 } );
-
-// In your controller or route
-Flight::log()->warning( 'This is a warning message' );

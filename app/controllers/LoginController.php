@@ -64,11 +64,13 @@ class LoginController extends BaseController {
 
 	public function logout(): void {
 		$session = $this->session();
+		$this->app->log()->warning( 'Unauthorized Access', [$session->get( 'log' )] );
 		$session->delete( 'log' );
 		$session->delete( 'role' );
 		$session->commit();
 		$session->destroy( $session->id() );
 		// $this->redirect( '\login' );
+		// In your controller or route
 		$this->app->redirect( $this->app->request()->referrer );
 	}
 }

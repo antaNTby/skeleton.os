@@ -20,6 +20,7 @@ class LoginMiddleware {
 			$this->app->halt( 401, '<a href="/login"> 401-Unauthorized </a>' );
 			// $this->app->jsonHalt( ['message' => 'Unauthorized'], 401 );
 			// $this->app->redirect( ' / login' );
+
 		}
 
 	}
