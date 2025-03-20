@@ -5,7 +5,10 @@ use flight\Engine;
 use flight\Session;
 
 $LoginMiddleware = new middleware\LoginMiddleware( $app );
-
+Flight::route( '/cls', function () {
+	echo 'log.ini очищен!';
+	\cls();
+} );
 Flight::route( '/login', \app\controllers\LoginController::class . '->index' )->setAlias( 'login' );
 Flight::route( '/logout', \app\controllers\LoginController::class . '->logout' )->setAlias( 'logout' );
 

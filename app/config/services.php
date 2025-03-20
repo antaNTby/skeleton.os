@@ -93,6 +93,25 @@ Flight::register( 'session', Session::class );
 // );
 
 // Register the logger with Flight
-Flight::register( 'log', Monolog\Logger::class, ['name'], function ( Monolog\Logger $log ) {
-	$log->pushHandler( new Monolog\Handler\StreamHandler( __APP__ . DIRECTORY_SEPARATOR . 'log.log', Monolog\Logger::WARNING ) );
+Flight::register( 'log', Monolog\Logger::class, ['antaNT64'], function ( Monolog\Logger $log ) {
+	$log->pushHandler( new Monolog\Handler\StreamHandler( __APP__ . DIRECTORY_SEPARATOR . 'log.ini', Monolog\Logger::DEBUG ) );
 } );
+
+Flight::map( 'logg', function (
+	string $message = '',
+	       $arr = []
+): void {
+	Flight::log()->info( $message, $arr );
+} );
+
+function debug(
+	string $message = '',
+	       $arr = []
+): void {
+	Flight::log()->debug( $message, $arr );
+}
+
+function cls(
+): void {
+	file_put_contents( __APP__ . DIRECTORY_SEPARATOR . 'log.ini', '' ); // Перезаписываем файл пустым
+}

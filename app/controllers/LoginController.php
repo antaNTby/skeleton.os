@@ -57,6 +57,7 @@ class LoginController extends BaseController {
 			$session->commit();
 			$this->redirect( '/' );
 
+			$this->app->log()->info( "Login -{$session->get( 'log' )}- as -{$session->get( 'role' )}-" );
 			exit;
 		}
 		$this->redirect( '\login' );
@@ -64,7 +65,7 @@ class LoginController extends BaseController {
 
 	public function logout(): void {
 		$session = $this->session();
-		$this->app->log()->warning( 'Unauthorized Access', [$session->get( 'log' )] );
+		$this->app->log()->info( 'Logout', [$session->get( 'log' )] );
 		$session->delete( 'log' );
 		$session->delete( 'role' );
 		$session->commit();

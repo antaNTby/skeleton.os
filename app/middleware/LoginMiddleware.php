@@ -17,6 +17,7 @@ class LoginMiddleware {
 
 		// прверяем совпадает ли авторизованный пользователь с admin
 		if ( $this->app->session()->get( 'log' ) !== 'admin' ) {
+			$this->app->log()->warning( 'Unauthorized Access MiddleWare Error', ['username' => $this->app->session()->get( 'log' )] );
 			$this->app->halt( 401, '<a href="/login"> 401-Unauthorized </a>' );
 			// $this->app->jsonHalt( ['message' => 'Unauthorized'], 401 );
 			// $this->app->redirect( ' / login' );
@@ -27,6 +28,7 @@ class LoginMiddleware {
 
 	public function after(): void {
 		bdump( 'AFTER' );
+
 	}
 
 }
