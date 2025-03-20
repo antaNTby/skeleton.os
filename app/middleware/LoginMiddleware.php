@@ -25,11 +25,7 @@ class LoginMiddleware {
 	}
 
 	public function after(): void {
-
 		bdump( 'AFTER' );
-
-		\Flight::view()->assign( ['SSSS' => $this->app->get( 'SSSS' )] );
-
 	}
 
 }

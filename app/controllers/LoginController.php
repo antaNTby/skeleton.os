@@ -61,13 +61,14 @@ class LoginController extends BaseController {
 		}
 		$this->redirect( '\login' );
 	}
-	user;
+
 	public function logout(): void {
 		$session = $this->session();
 		$session->delete( 'log' );
 		$session->delete( 'role' );
 		$session->commit();
 		$session->destroy( $session->id() );
-		$this->redirect( '\login' );
+		// $this->redirect( '\login' );
+		$this->app->redirect( $this->app->request()->referrer );
 	}
 }

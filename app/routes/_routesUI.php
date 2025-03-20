@@ -12,13 +12,6 @@ Flight::route( '/logout', \app\controllers\LoginController::class . '->logout' )
 Flight::route( 'POST /authenticate', \app\controllers\LoginController::class . '->authenticate' )->setAlias( 'authenticate' );
 
 Flight::route( '/admin', \app\controllers\LoginController::class . '->authenticate' )->setAlias( 'admin' );
-// Flight::route( '/logout', function () {
-// 	$session = Flight::session();
-// 	$session->clear(); // Очистить все данные сессии
-// 	Flight::json( ['message' => 'Успешный выход'] );
-// } );
-
-bdump( $app );
 
 Flight::route( '*', function () {
 	$admin_main_content_template = 'admin.tpl.html';
