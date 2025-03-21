@@ -4,6 +4,7 @@ ini_set( 'session.serialize_handler', 'php_serialize' );
 $ds = DIRECTORY_SEPARATOR;
 define( '__ROOT__', __DIR__ . $ds . '..' );
 define( '__APP__', dirname( __DIR__, 1 ) . $ds . 'app' );
+define( '__CORE__', dirname( __DIR__, 1 ) . $ds . 'core' );
 define( '__PUBLIC__', dirname( __DIR__, 1 ) . $ds . 'public' );
 
 /** Absolute path to project root */

@@ -2,7 +2,6 @@
 namespace app\controllers;
 
 use flight\Engine;
-use flight\Session;
 
 ### use Ghostff\Session\Session;
 
@@ -15,7 +14,7 @@ class LoginController extends BaseController {
 
 	protected Engine $app;
 
-	public function __construct( $app ) {
+	public function __construct( Engine $app ) {
 		$this->app = $app;
 	}
 
@@ -44,7 +43,6 @@ class LoginController extends BaseController {
 		// dd( $postData );
 		if ( $postData->userpw === '555' ) {
 			$session->set( 'log', $postData->userlogin );
-			// bdump( [$postData, 'strrrr' => "userpw === '555'"] );
 
 			// Sets the current user role
 			if ( $postData->userlogin === 'admin' ) {
@@ -55,12 +53,9 @@ class LoginController extends BaseController {
 				$session->set( 'role', 'guest' );
 			}
 			$session->commit();
-			$this->redirect( '/' );
-
-			$this->app->log()->info( "Login -{$session->get( 'log' )}- as -{$session->get( 'role' )}-" );
-			exit;
 		}
-		$this->redirect( '\login' );
+
+		$this->redirect( '/' );
 	}
 
 	public function logout(): void {
@@ -72,6 +67,7 @@ class LoginController extends BaseController {
 		$session->destroy( $session->id() );
 		// $this->redirect( '\login' );
 		// In your controller or route
-		$this->app->redirect( $this->app->request()->referrer );
+		// $this->app->redirect( $this->app->request()->referrer );
+		$this->app->redirect( '\shop' );
 	}
 }

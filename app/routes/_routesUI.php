@@ -2,19 +2,29 @@
 
 use app\middleware;
 use flight\Engine;
+use flight\net\Router;
 use flight\Session;
 
 $LoginMiddleware = new middleware\LoginMiddleware( $app );
+// Home Page
+$router->get( '/', \app\controllers\HomeController::class . '->index' )->setAlias( 'home' );
+
+// Blog
+$router->group( '/admin', function ( Router $router ) {
+
+	$router->get( '/dpt/@sub', \app\controllers\DptController::class . '->showSub' )->setAlias( 'showSub' );
+	$router->get( '/dpt/edit/@sub/@id', \app\controllers\DptController::class . '->editSub' )->setAlias( 'editSub' );
+
+} );
+
+Flight::route( 'POST /authenticateME', \app\controllers\LoginController::class . '->authenticate' )->setAlias( 'authenticate' );
+
 Flight::route( '/cls', function () {
 	echo 'log.ini очищен!';
 	\cls();
 } );
 Flight::route( '/login', \app\controllers\LoginController::class . '->index' )->setAlias( 'login' );
 Flight::route( '/logout', \app\controllers\LoginController::class . '->logout' )->setAlias( 'logout' );
-
-Flight::route( 'POST /authenticate', \app\controllers\LoginController::class . '->authenticate' )->setAlias( 'authenticate' );
-
-Flight::route( '/admin', \app\controllers\LoginController::class . '->authenticate' )->setAlias( 'admin' );
 
 Flight::route( '*', function () {
 	$admin_main_content_template = 'admin.tpl.html';
@@ -24,6 +34,6 @@ Flight::route( '*', function () {
 		'container_width'             => 'container-xxl',
 		'ACCESS_DENIED_HTML'          => Flight::get( 'ACCESS_DENIED_HTML' ),
 		'admin_main_content_template' => $admin_main_content_template,
-
+		'base_url'                    => __PUBLIC__,
 	] );
 } )->addMiddleware( $LoginMiddleware );
