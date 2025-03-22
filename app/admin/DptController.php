@@ -1,6 +1,6 @@
 <?php
 
-namespace app\controllers;
+namespace app\admin;
 use flight\Engine;
 
 class HomeController extends BaseController {

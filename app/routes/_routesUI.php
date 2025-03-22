@@ -7,7 +7,7 @@ use flight\Session;
 
 $LoginMiddleware = new middleware\LoginMiddleware( $app );
 // Home Page
-$router->get( '/', \app\controllers\HomeController::class . '->index' )->setAlias( 'home' );
+$router->get( '/', \app\admin\DptController::class . '->showSub' )->setAlias( 'home' );
 
 // Blog
 $router->group( '/admin', function ( Router $router ) {

@@ -11,11 +11,11 @@ if ( file_exists( __DIR__ . $ds . 'config.php' ) === false ) {
 	Flight::halt( 500, 'Config file not found. Please create a config.php file in the app/config directory to get started.' );
 }
 
+Flight::path( __APP__ . $ds . 'admin' . $ds );
 // It is better practice to not use static methods for everything. It makes your
 // app much more difficult to unit test easily.
 // This is important as it connects any static calls to the same $app object
 $app = Flight::app();
-
 /*
  * Load the config file
  * P.S. When you require a php file and that file returns an array, the array
