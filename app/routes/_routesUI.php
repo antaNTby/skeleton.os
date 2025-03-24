@@ -10,7 +10,7 @@ $LoginMiddleware = new middleware\LoginMiddleware( $app );
 $router->get( '/', \app\admin\DptController::class . '->showSub' )->setAlias( 'home' );
 
 // Blog
-$router->group( '/admin', function ( Router $router ) {
+$router->group( '/sub', function ( Router $router ) {
 
 	$router->get( '/@sub', \app\admin\DptController::class . '->showSub' )->setAlias( 'showSub' );
 	$router->get( '/@sub/@id', \app\admin\DptController::class . '->editSub' )->setAlias( 'editSub' );
