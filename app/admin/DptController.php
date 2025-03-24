@@ -11,7 +11,7 @@ class DptController extends \app\controllers\BaseController {
 	 *
 	 * @return void
 	 */
-	public function showSub( string $sub ): void {
+	public function showSub( string $sub = 'menu' ): void {
 		$admin_main_content_template = 'admin.tpl.html';
 		$sub_content_template        = $sub . '.tpl.html';
 
