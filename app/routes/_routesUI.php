@@ -12,8 +12,8 @@ $router->get( '/', \app\admin\DptController::class . '->showSub' )->setAlias( 'h
 // Blog
 $router->group( '/admin', function ( Router $router ) {
 
-	$router->get( '/dpt/@sub', \app\controllers\DptController::class . '->showSub' )->setAlias( 'showSub' );
-	$router->get( '/dpt/edit/@sub/@id', \app\controllers\DptController::class . '->editSub' )->setAlias( 'editSub' );
+	$router->get( '/@sub', \app\admin\DptController::class . '->showSub' )->setAlias( 'showSub' );
+	$router->get( '/@sub/@id', \app\admin\DptController::class . '->editSub' )->setAlias( 'editSub' );
 
 } );
 
